@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Human Impacts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+  <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <!-- <link rel="manifest" href="assets/images/site.webmanifest"> -->
+
+  <style>
+	.header {display: flex;justify-content:space-between;align-items:center;width:100%;padding:15px;}
+	.logo {text-decoration: none;}
+	.logo img {width: 200px;}
+	.header h1 {width: calc(100% - 210px);margin:0;padding:0;text-align: center;font-size:32px;}
+  </style>
+</head>
+<body>
+<div style="padding-top: 0px; padding-bottom: 50px;">
+	<div class="ajax_loader">
+		<img src="assets/images/loading.gif" style="width: 100px; height:100px;">
+	</div>
+	<div class="ajax_loader_2">
+		<img src="assets/images/loading.gif" style="width: 100px; height:100px;">
+	</div>
+	<!--<div class="container">-->
+		<div class="header">
+			<a class="logo" href="https://camilo-mora.github.io/GEO309/" target="_blank">
+				<img src="https://camilo-mora.github.io/GEO309/images/MoraLab.png" />
+			</a>
+			<h1> Traceable evidence of the impacts of climate change on pathogenic human diseases </h1>
+		</div>
+	<!--</div>-->
+
+	<!-- page contents -->
+	<div class="container-fluid">
+		<div class="content-box">
+			<div class="panel panel-default">
+				<div class="panel-heading clearfix">
+					<span>References</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" name="only_pending" value="0" checked="checked"> All</label>&nbsp;&nbsp;
+					<label><input type="radio" name="only_pending" value="1"> Pending</label>
+					<a href="index.html" class="pull-right btn btn-info">Back</a>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-bordered custom-table" id="listTable">
+							<thead>
+							<tr>
+								<th style="width: 50px;">Sr.No</th>
+								<th>User</th>
+								<th>Type</th>
+								<th>Authors</th>
+								<th>Year</th>
+								<th>Title</th>
+								<th>Journal</th>
+								<th>Volume</th>
+								<th>Pages</th>
+								<th>Book Title</th>
+								<th>Editor</th>
+								<th>Publisher</th>
+								<th>City</th>
+								<th>Institution</th>
+								<th>DOI</th>
+								<th>ISSN</th>
+								<th>PDF</th>
+								<th>Entries</th>
+								<!--<th width="100">Action</th>-->
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery-3.4.1.min.js"></script>
+		<script src="assets/js/jquery.dataTables.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/jquery.fancybox.js"></script>
+		<script>
+			let g_allEntries = [];
+			let g_allReferences = [];
+			function buildTable(references) {
+				$('#listTable').dataTable().fnDestroy();
+				$('#listTable').DataTable({
+					data: references,
+					columnDefs: [/*{
+						"targets": -1,
+						"data": null,
+						"orderable": false,
+						"defaultContent": "<button type=\"button\" class=\"btn btn-sm btn-secondary\">追加</button>"
+					}*/{
+						"targets": 16,
+						"data" : 16,
+						"render": function ( data, type, row, meta ) {
+							if (!data || data === 'NA') return '';
+							return '<a href="PDFs/' + data + '" target="_blank">PDF</a>';
+						}
+					},{
+						"targets": 17,
+						"data" : 17,
+						"render": function ( data, type, row, meta ) {
+							if (!data) return '';
+							return '<a href="#" class="link-entries" data-ref-id="' + row[0] + '">' + data + '</a>';
+						}
+					}],
+
+				});
+			}
+			function loadEntries() {
+				$.ajax({
+					url: 'json/entries.json',
+					type: "get",
+					dataType: "json",
+					success: function(entries) {
+						g_allEntries = entries;
+					}
+				});
+			}
+			function loadReferences() {
+				$.ajax({
+					url: 'json/references.json',
+					type: "get",
+					dataType: "json",
+					success: function(references) {
+						g_allReferences = references;
+						filterReferences();
+						loadEntries();
+					}
+				});
+			}
+			loadReferences();
+
+			/**
+			 * Filter references by pending option
+			 */
+			function filterReferences() {
+				let isPending = parseInt($("[name=only_pending]:checked").val()) > 0;
+				if (isPending) {
+					buildTable(g_allReferences.filter(d => !d[17]));
+					return;
+				}
+				buildTable(g_allReferences);
+			}
+
+			/**
+			 * Display entries on dialog
+			 *
+			 * @param refId
+			 */
+			function displayEntries(refId) {
+				if (g_allEntries.length === 0) return;
+				let entries = g_allEntries.filter(d => d.ref_id == refId);
+				if (entries.length === 0) return;
+
+				let html='<div class="container"><h2 class="text-center text-bold">Entries</h2><div class="panel-group">';
+				$.each(entries,function(idx, entry){
+					let entryHtml='';
+					let source='';
+					if (entry.authors!="" && entry.authors!=null) {
+						source+=entry.authors;
+					}
+					if (entry.year!="" && entry.year!=null) {
+						source+=', '+entry.year;
+					}
+					if (entry.title!="" && entry.title!=null) {
+						source+=', '+entry.title;
+					}
+
+					entryHtml+='<p><b>Entry ID:</b>'+entry.id+'</p>';
+					entryHtml+='<p><b>Source:</b><br>'+source+'</p>';
+					if(!entry.PDF && entry.PDF!="NA") {
+						entryHtml+='<p><a target="_blank" href="PDFs/' + entry.PDF + '">Download</a></p>';
+					}
+					entryHtml+='<hr>';
+					if(entry.climatic_changes!="" && entry.cc!=null)
+						entryHtml+='<p><b>Climatic Change:</b><br>'+entry.cc+'</p>';
+
+					if(entry.pathogen_general!="" && entry.pg!=null)
+						entryHtml+='<p><b>Pathogen General:</b><br>'+entry.pg+'</p>';
+
+					if(entry.pathogen_specific!="" && entry.ps!=null)
+						entryHtml+='<p><b>Pathogen Disease:</b><br>'+entry.ps+'</p>';
+
+					if(entry.pathogen_agent!="" && entry.pa!=null)
+						entryHtml+='<p><b>Pathogen Agent:</b><br>'+entry.pa+'</p>';
+
+					if(entry.transmission_type_general!="" && entry.ttg!=null)
+						entryHtml+='<p><b>Transmission type general:</b><br>'+entry.ttg+'</p>';
+
+					if(entry.transmission_type_specific!="" && entry.tts!=null)
+						entryHtml+='<p><b>Transmission type specific:</b><br>'+entry.tts+'</p>';
+
+					if(entry.transmission_type_specific_species!="" && entry.ttss!=null)
+						entryHtml+='<p><b>Transmission type specific species:</b><br>'+entry.ttss+'</p>';
+
+					if(entry.transmission_type_specific_additional!="" && entry.ttsa!=null)
+						entryHtml+='<p><b>Transmission type additional:</b><br>'+entry.ttsa+'</p>';
+
+					if(entry.transmission_type_specific_additional_species!="" && entry.ttsas!=null)
+						entryHtml+='<p><b>Transmission type additional species:</b><br>'+entry.ttsas+'</p>';
+
+					if(entry.impact!="" && entry.impact!=null)
+						entryHtml+='<p><b>Impacts:</b><br>'+entry.impact+'</p>';
+
+					if(entry.comments!="" && entry.comments!=null)
+						entryHtml+='<p><b>Comments/Finding:</b><br>'+entry.comments+'</p>';
+
+					html+='<div class="panel panel-default">\
+					  <div class="panel-heading">\
+						<h4 class="panel-title">\
+						  <a data-toggle="collapse" href="#collapse'+idx+'">Entry  '+(idx+1)+'</a>\
+						</h4>\
+					  </div>\
+					  <div id="collapse'+idx+'" class="panel-collapse collapse">\
+						<div class="panel-body">'+entryHtml+'</div>\
+					  </div>\
+					  </div>';
+
+				});
+				html+='</div></div></div>';
+				$.fancybox.open(html);
+			}
+
+			$(function() {
+				$("[name=only_pending]").on("click", function() {
+					filterReferences();
+				});
+
+				$("#listTable").on("click", ".link-entries", function(evt) {
+					evt.stopPropagation();
+					let refId = $(evt.target).data("ref-id");
+					displayEntries(refId);
+					return false;
+				});
+
+				//$(".container").first().attr('class','container-fluid');
+			});
+		</script>
+	</div>
+	<!-- end of page contents -->
+</div>
+
+
+
+	<!-- Custom Dialogs -->
+	<!-- Confirm -->
+	<div id='confirmDb' class="dialogDiv">
+		<div class='title' id="confirmMsg">
+		</div>
+		<hr>
+		<input type='button' class="btn text-bold btn-danger text-white" value='no' id='cancelConfirmBtn' />
+		<input type='button' class="btn text-bold btn-success text-white pull-right" value='yes' id='confirmBtn' />
+	</div>
+
+
+	<!-- Warning -->
+	<div id='warnDb' class="dialogDiv">
+		<div class='title' id="warnMsg">
+		</div>
+		<hr>
+		<input type='button' class="btn btn-warning text-bold btn-info text-white pull-right" value='OK' id='warnBtn' />
+	</div>
+
+
+	<!-- Error -->
+	<div id='errorDb' class="dialogDiv">
+		<div class='title' id="errorMsg">
+		</div>
+		<hr>
+		<input type='button' class="btn text-bold btn-danger text-white pull-right" value='OK' id='errorBtn' />
+	</div>
+
+	<!-- Success -->
+	<div id='successDb' class="dialogDiv">
+		<div class='title' id="succMsg">
+		</div>
+		<hr>
+		<input type='button' class="btn btn-success text-bold text-white pull-right" value='OK' id='succBtn' />
+	</div>
+	<!-- Custom Dialogs -->
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(".ajax_loader").hide();
+	$(document).ajaxStart(function(){
+		$(".ajax_loader").show();
+	});
+	$(document).ajaxComplete(function(){
+		$(".ajax_loader").hide();
+	});
+	$(document).ready(function(){
+		$('.show_popup').click(function(e){
+			e.preventDefault();
+			$('a.show_popup').fancybox({
+				'type' : 'iframe',
+			});
+		});
+	});
+
+	//warningdialog();
+	function warningdialog(message="Are You Sure?",btnYes="OK",dialTitle="Warning") {
+
+		$('#warnMsg').html(message);
+		$("#warnBtn").val(btnYes);
+		var warndialog = $('#warnDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#E08E0B !important;color:white !important;");
+		$('#warnBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			warndialog.dialog('close');
+		});
+	}
+	//errordialog();
+	function errordialog(message="Are You Sure?",btnYes="OK",dialTitle="Error") {
+
+		$('#errorMsg').html(message);
+		$("#errorBtn").val(btnYes);
+		var errordialog = $('#errorDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#D73925 !important;color:white !important;");
+		$('#errorBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			errordialog.dialog('close');
+		});
+	}
+
+	//successdialog();
+	function successdialog(message="Are You Sure?", btnYes="OK",dialTitle="Success") {
+
+		$('#succMsg').html(message);
+		$("#succBtn").val(btnYes);
+		var succdialog = $('#successDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#00A65A !important;color:white !important;");
+		$('#succBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			succdialog.dialog('close');
+		});
+	}
+</script>
+
+</body>
+</html>

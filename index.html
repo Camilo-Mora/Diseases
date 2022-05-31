@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Human Impacts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+  <!--<link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">-->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <!-- <link rel="manifest" href="assets/images/site.webmanifest"> -->
+  <style>
+	.header {display: flex;justify-content:space-between;align-items:center;width:100%;padding: 15px;}
+	.logo {text-decoration: none;}
+	.logo img {width: 200px;}
+	.header h1 {width: calc(100% - 210px);margin:0;padding:0;text-align: center;font-size:32px;}
+
+	.nav li a:hover {background: transparent;text-decoration: underline;}
+  </style>
+</head>
+<body>
+
+<div style="padding-top: 0; padding-bottom: 50px;">
+	<div class="ajax_loader">
+		<img src="assets/images/loading.gif" style="width: 100px; height:100px;">
+	</div>
+	<div class="ajax_loader_2">
+		<img src="assets/images/loading.gif" style="width: 100px; height:100px;">
+	</div>
+	<div class="header">
+		<a class="logo" href="https://camilo-mora.github.io/GEO309/" target="_blank">
+			<img src="https://camilo-mora.github.io/GEO309/images/MoraLab.png" />
+		</a>
+		<h1> Traceable evidence of the impacts of climate change on pathogenic human diseases </h1>
+	</div>
+	<nav class="navbar cus-margin">
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav" style="float: right;">
+				<!--li class=""><a href="http://diseaseproject.impactsofclimatechange.org/">Home</a></li-->
+				<!--<li class=""><a href="http://www.soc.hawaii.edu/mora/">MoraLab</a></li>
+                <li class=""><a href="http://www.ImpactsOfClimateChange.info">ImpactsProject</a></li>-->
+				<li class=""><a href="references.html">References</a></li>
+				<li class=""><a href="entries.html">Entries</a></li>
+				<li class=""><a href="info.html" class="show_popup">Info</a></li>
+				<!--<li class=""><a href="http://diseaseproject.impactsofclimatechange.org/index.php/entries/users">Users</a></li>-->
+			</ul>
+		</div><!--/.nav-collapse -->
+	</nav>
+
+<div class="container-fluid">
+	<style>
+    .cndce-sankey{
+        position: relative;
+        min-height: 100vh;
+    }
+
+    .cndce-sankey__instructions{
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        letter-spacing: 2px;
+
+        z-index: 1000;
+        background: #ffffffbf;
+
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cndce-sankey__instructions > div{
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+    }
+
+    .cndce-sankey canvas{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .cndce-sankey svg{
+        position: relative;
+        z-index: 10;
+    }
+
+    .cndce-sankey__label{
+        font-family: sans-serif;
+        font-size: 1rem;
+    }
+
+    .cndce-sankey__node{
+        fill: #969696;
+        stroke: black;
+        cursor: pointer;
+        /*
+            transition: all 0.3s cubic-bezier(0.08, 0.47, 0.38, 0.84);
+            transform-origin: center;
+            transform-box: fill-box;*/
+    }
+
+    .cndce-sankey__node:hover{
+        /*transform: scale(1.1);*/
+    }
+
+    .cndce-sankey__link {
+        fill: none;
+        stroke: rgba(145, 145, 145, 0.25);
+        /*stroke-opacity: .3;*/
+    }
+
+    .cndce-sankey__link__invisible {
+        stroke-opacity: .3;
+    }
+
+    .cndce-sankey__link:hover, .cndce-sankey__link__highlight {
+        stroke: #45092060;
+        /*stroke-opacity: .6;*/
+    }
+
+    .cndce-sankey__node[data-type="pathogen"]{
+        fill: red;
+    }
+    .cndce-sankey__node[data-type="trans"]{
+        fill: blue;
+    }
+    .cndce-sankey__node[data-type="climatic"]{
+        fill: green;
+    }
+
+    .cndce-sankey__node_category rect {
+        opacity: 0.1;
+    }
+
+    .cndce-sankey__node_category text {
+        fill: black;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .title-top {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+</style>
+<div class="row">
+    <div class="col-lg-12 text-center" style="margin-bottom: 10px;">
+        Impact: <select name="filter_impact" class="input-sm">
+            <option value="">-- Select --</option>
+			<option value="Negative" >Negative</option>
+			<option value="None" >Unspecified</option>
+			<option value="Neutral" >Neutral</option>
+			<option value="Positive" >Positive</option>
+		</select>
+        <button type="button" id="btn-filter" class="btn btn-sm btn-primary">Filter</button>
+    </div>
+    <div class="col-lg-12">
+		<p style="color:red;padding: 5px 30px;font-weight: bold;">Click on boxes to filter. Click on lines to display entries.</p>
+        <div class="cndce-sankey">
+            <div class="cndce-sankey__instructions">
+                <div>
+                    Click on a node to focus (relayout) and collapse other nodes.
+                    <br><br>
+                    Click on an empty space to view all nodes
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var g_isEntireDiagram = true;
+    var g_sankeyNodes = []; // CLIMATE HAZARDS(10000), TRANSMISSION TYPE(20000), DISEASE | PATHOGEN(30000)
+    var g_sankeyLinkCodes = [];
+    var g_ttGenerals = [];
+    var g_pathogenGenerals = [];
+    var g_sankeyNodeIDs = {};
+
+    var g_allEntries = [];
+
+    // https://htmlcolorcodes.com/color-chart/material-design-color-chart/
+    var blueColors = [
+        'rgb(0, 102, 204)',
+        'rgb(0, 61, 122)',
+        'rgb(21, 101, 192)',
+        'rgb(0, 82, 163)',
+        'rgb(13, 71, 161)',
+        'rgb(68, 138, 255)',
+        'rgb(100, 181, 246)',
+        'rgb(144, 202, 249)',
+        'rgb(227, 242, 253)',
+        'rgb(187, 222, 251)',
+        'rgb(21, 101, 192)'
+    ];
+    var redColors = [
+        'rgb(255, 245, 157)',
+        'rgb(255, 235, 59)',
+        'rgb(249, 168, 37)',
+        'rgb(255, 171, 0)',
+        'rgb(255, 204, 128)',
+        'rgb(255, 152, 0)',
+        'rgb(239, 108, 0)',
+        'rgb(255, 204, 188)',
+        'rgb(255, 112, 67)',
+        'rgb(230, 74, 25)',
+        'rgb(255, 110, 64)',
+        'rgb(255, 205, 210)',
+        'rgb(255, 23, 68)',
+        'rgb(233, 30, 99)',
+        'rgb(239, 83, 80)',
+        'rgb(255, 138, 128)'
+    ];
+</script>
+
+<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+<script src="assets/js/jquery.fancybox.js"></script>
+<!--<script src="assets/js/jquery.dataTables.min.js"></script>-->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/sankey/d3.v6.min.js"></script>
+<script src="assets/js/sankey/d3-sankey.v0.12.3.js"></script>
+<!--<script src="assets/js/sankey/d3-sankey.v0.12.3.min.js"></script>-->
+<script src="assets/js/sankey/d3-interpolate-path.min.js"></script>
+<!--<script src="assets/js/sankey/cndce-request.js"></script>-->
+<!--<script src="assets/js/gunzip.min.js"></script>-->
+<script>
+    let NODE_MARGIN = 6;
+    let NODE_CATEGORY_MARGIN = 35;
+    let NODE_BOTTOM_Y = 0;
+    let SIBILING_SPACE = 120;
+
+	/**
+	 * Parse url params (selected nodes' type & id)
+	 * @type {{}} {type(0-6) : id(int)}
+	 */
+	let selectedNodeTypes = [], selectedNodeIds = [];
+	let selectedImpact = '';
+    let selectedNodes = parseParams();
+    let maxNodeCount = 531;
+
+    Promise.all([
+		d3.json('./json/nodes.json'),
+		d3.json('./json/links.json'),
+		d3.json('./json/ttGenerals.json'),
+		d3.json('./json/pathogenGenerals.json'),
+	]).then((data)=>{
+
+		//g_sankeyNodes = data[0];
+		//g_sankeyLinkCodes = data[1];
+		g_ttGenerals = data[2];
+		g_pathogenGenerals = data[3];
+
+		let hasSelectedNodes = Object.keys(selectedNodes).length > 0;
+		let hasImpactCondition = selectedImpact !== '';
+
+		// Filter by selected nodes
+		if (!hasSelectedNodes && !hasImpactCondition) { // no condition
+			g_sankeyNodes = data[0];
+			g_sankeyLinkCodes = data[1];
+		} else {
+			g_isEntireDiagram = false;
+			maxNodeCount = 0;
+
+			let nodeIdsByCol = [{}, {}, {}, {}, {}, {}, {}, {}];
+			let validNodes = {/*nodeId: true/false*/};
+			g_sankeyLinkCodes = data[1].filter(d => {
+				let nodeIds = d.split('-');
+				if (hasSelectedNodes) {
+					for (let type in selectedNodes) {
+						if (nodeIds[type]/*.substr(-4)*/ !== selectedNodes[type]) {
+							return false;
+						}
+					}
+				}
+				if (hasImpactCondition) {
+					if (nodeIds[7] !== selectedImpact) return false;
+				}
+				for (let i = 0; i < nodeIds.length; i ++) {
+					validNodes[nodeIds[i]] = true;
+				}
+				nodeIds.forEach((id, i) => {
+					nodeIdsByCol[i][id] = 1;
+				});
+				return true;
+			});
+			g_sankeyNodes = data[0].filter(d => (d.id in validNodes));
+			nodeIdsByCol.forEach((ids) => { maxNodeCount = Math.max(maxNodeCount, Object.keys(ids).length); });
+
+			g_sankeyNodes.sort((d1, d2) => {
+				let cate1 = d1.id.substr(0,1);
+				let cate2 = d2.id.substr(0,1);
+				if (cate1 !== cate2) return cate1 - cate2;
+				if (cate1 === '1') return 0;
+				return d1.general_id - d2.general_id;
+			});
+		}
+
+		g_sankeyNodes.forEach(function (val, i) {
+			g_sankeyNodeIDs[val.id] = i;
+		});
+
+		// Get upper node for every nodes (Transmission type nodes / Pathogen nodes respectively)
+		if (!g_isEntireDiagram) {
+			// linkCodes(node id) => linkIndexCodes(node idx)
+			let ttIdxLinkCodes = [];
+			let pathogenIdxLinkCodes = [];
+			g_sankeyLinkCodes.forEach((d, i) => {
+				let ttIdxLinkCode = [], pathogenIdxLinkCode = [];
+				let nodeIds = d.split('-');
+				for (let j = 1; j < 7; j++) {
+					if (j < 5) { // transmission type nodes (1-4)
+						ttIdxLinkCode.push((nodeIds[j] in g_sankeyNodeIDs) ? ('0000' + (g_sankeyNodeIDs[nodeIds[j]]+1)).substr(-4) : '0000');
+					} else {
+						pathogenIdxLinkCode.push((nodeIds[j] in g_sankeyNodeIDs) ? ('0000' + (g_sankeyNodeIDs[nodeIds[j]]+1)).substr(-4) : '0000');
+					}
+				}
+				ttIdxLinkCodes.push(ttIdxLinkCode.join('-'));
+				pathogenIdxLinkCodes.push(pathogenIdxLinkCode.join('-'));
+			});
+
+			// remove duplicates
+			let seen = {};
+			ttIdxLinkCodes = ttIdxLinkCodes.filter(function(item) {
+				return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+			});
+			seen = {};
+			pathogenIdxLinkCodes = pathogenIdxLinkCodes.filter(function(item) {
+				return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+			});
+			maxNodeCount = Math.max(maxNodeCount, ttIdxLinkCodes.length, pathogenIdxLinkCodes.length);
+
+			// sort linkIndexCodes and get linkCodes from that, and analyze upper node for every nodes
+			// sorted linkIndexCodes(node idx) => linkCodes(node id)
+			// --- transmission type nodes
+			ttIdxLinkCodes.sort();
+			let _prevIndexes = ['0000', '0000', '0000', '0000'], prevIdx;
+			let upperNodeIDs = {};
+			ttIdxLinkCodes.forEach((d) => {
+				if (d === '0000-0000-0000-0000') return; // skip empty
+
+				let indexes = d.split('-'), idx, nodeID;
+				let j, parentNodeIdx, parentNodeID, upperNodeID;
+				for (let i in indexes) {
+					idx = indexes[i];
+					if (idx === '0000') continue;
+					idx = idx - 1; // 0-based index
+
+					// node id
+					nodeID = g_sankeyNodes[idx].id;
+					if (upperNodeIDs.hasOwnProperty(nodeID)) continue;
+
+					// upper node's id (What is upper node ?  same parent > other node on same layer,  or  other node on first layer)
+					upperNodeIDs[nodeID] = -1;
+					parentNodeIdx = '0000';
+					for (j = 0; j < 4; j++) {
+						if (_prevIndexes[j] !== indexes[j] && _prevIndexes[j] !== '0000') {
+							prevIdx = _prevIndexes[j] - 1; // 0-based index
+							upperNodeID = g_sankeyNodes[prevIdx].id;
+							upperNodeIDs[nodeID] = upperNodeID;
+							break;
+						} else if (_prevIndexes[j] !== '0000' && indexes[j] !== '0000' && j < i) {
+							parentNodeIdx = indexes[j];
+						}
+					}
+					if (upperNodeIDs[nodeID] === -1 && parentNodeIdx !== '0000') {
+						parentNodeIdx = parentNodeIdx - 1; // 0-based index
+						parentNodeID = g_sankeyNodes[parentNodeIdx].id;
+						upperNodeIDs[nodeID] = upperNodeIDs[parentNodeID]; // upper node of parent node
+					}
+
+					g_sankeyNodes[idx].upper_node = upperNodeIDs[nodeID];
+				}
+
+				_prevIndexes = indexes;
+			});
+
+			// --- pathogen nodes
+			pathogenIdxLinkCodes.sort();
+			_prevIndexes = ['0000', '0000'];
+			upperNodeIDs = {};
+			pathogenIdxLinkCodes.forEach((d) => {
+				if (d === '0000-0000') return; // skip empty
+
+				let indexes = d.split('-'), idx, nodeID;
+				let j, parentNodeIdx, parentNodeID, upperNodeID;
+				for (let i in indexes) {
+					idx = indexes[i];
+					if (idx === '0000') continue;
+					idx = idx - 1; // 0-based index
+
+					// node id
+					nodeID = g_sankeyNodes[idx].id;
+					if (upperNodeIDs.hasOwnProperty(nodeID)) continue;
+
+					// upper node's id (What is upper node ?  same parent > other node on same layer,  or  other node on first layer)
+					upperNodeIDs[nodeID] = -1;
+					parentNodeIdx = '0000';
+					for (j = 0; j < 4; j++) {
+						if (_prevIndexes[j] !== indexes[j] && _prevIndexes[j] !== '0000') {
+							prevIdx = _prevIndexes[j] - 1; // 0-based index
+							upperNodeID = g_sankeyNodes[prevIdx].id;
+							upperNodeIDs[nodeID] = upperNodeID;
+							break;
+						} else if (_prevIndexes[j] !== '0000' && indexes[j] !== '0000' && j < i) {
+							parentNodeIdx = indexes[j];
+						}
+					}
+					if (upperNodeIDs[nodeID] === -1 && parentNodeIdx !== '0000') {
+						parentNodeIdx = parentNodeIdx - 1; // 0-based index
+						parentNodeID = g_sankeyNodes[parentNodeIdx].id;
+						upperNodeIDs[nodeID] = upperNodeIDs[parentNodeID]; // upper node of parent node
+					}
+
+					g_sankeyNodes[idx].upper_node = upperNodeIDs[nodeID];
+				}
+
+				_prevIndexes = indexes;
+			});
+		}
+
+		// Hide Impact-filter, when one or more nodes have been selected
+		if (selectedNodeTypes.length > 0 && selectedNodeIds.length > 0) {
+			// For sub-diagram, hide filter item
+			$("select[name=filter_impact]").parent().hide();
+		}
+		$("select[name=filter_impact]").val(selectedImpact);
+
+		// Begin of process-logic
+        const WIDTH = Math.max(1300, document.body.clientWidth - 100);
+        const HEIGHT = g_isEntireDiagram ? 3000 : (maxNodeCount < 5 ? 5 : (maxNodeCount < 20 ? maxNodeCount * 2 : maxNodeCount)) * 10;
+        const MARGIN = {
+            TOP: 30,
+            BOTTOM: 10,
+            LEFT: 30,
+            RIGHT: 30
+        };
+
+        var COLOR_LINKS = '#b9b9b970';
+        var COLOR_LINK_ACTIVE = '#45092070';
+
+        var OPACITY_DISABLED = 0.3;
+
+        var NODE_TRANSITION_LIMIT = 400;
+        var TRANSITION_DURATION = 500;
+        var INSTRUCTION_DURATION = 500;
+
+        var svg;
+        var sankey;
+        var persistActive = false;
+        var activeLinkCodes = [];
+        var activeGraph = {nodes: [], link: []};
+
+        var m_layerIndexes = {
+            0:0, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6
+        };
+        var m_layerCount = 7;
+        var m_transTypeLayers = 4;
+        var m_pathogenLayers = 2;
+
+
+        (async function init(){
+            await initData();
+            initSankey();
+            initD3();
+            drawActiveLinks();
+
+            setTimeout(()=>{
+                d3.select('.cndce-sankey__instructions')
+                    .transition()
+                    .style('opacity', 0)
+                    .on('end', function () {
+                        d3.select(this).remove()
+                        // console.log(this);
+                    })
+
+            }, INSTRUCTION_DURATION)
+
+        })();
+
+        async function initData(){
+            //data = await requestJSON(jsonURL);
+            activeLinkCodes = g_sankeyLinkCodes;
+            activeGraph = getActiveGraph();
+
+            //let {nodes, links} = getActiveGraph();
+            //data.nodes = nodes;
+            //data.links = links;
+        }
+
+        function initSankey(){
+            sankey = d3.sankey()
+                .nodeId(d => d.id)
+                .nodeSort(null)
+                .nodeAlign(customNodeAlign)
+                .extent([[MARGIN.LEFT, MARGIN.TOP],[WIDTH + MARGIN.LEFT, HEIGHT + MARGIN.TOP]]);
+        }
+
+        function initD3(){
+
+            let cndceSankey = d3.select('.cndce-sankey')
+                .on('click', handleEmptyClick);
+
+            sankey
+                .nodes(activeGraph.nodes)
+                .links(activeGraph.links);
+
+            svg = cndceSankey.append('svg')
+                .attr('width', WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
+                .attr('height', HEIGHT + MARGIN.TOP + MARGIN.BOTTOM);
+
+            svg.append('g')
+                .attr('class', 'cndce-sankey__node_categories')
+                .attr("transform", `translate(0, ${MARGIN.TOP})`);
+
+            svg.append('g')
+                .attr('class', 'cndce-sankey__links')
+                .attr("transform", `translate(0, ${MARGIN.TOP})`);
+
+            svg.append('g')
+                .attr('class', 'cndce-sankey__nodes')
+                .attr("transform", `translate(0, ${MARGIN.TOP})`);
+
+            svg.append('g')
+                .attr('class', 'cndce-sankey__labels')
+                .attr("transform", `translate(0, ${MARGIN.TOP})`);
+
+            // ------ Display title of node groups ------
+            svg.append("text")
+                .attr('class', 'title-top')
+                .attr("text-anchor", 'left')
+                .attr('x', MARGIN.LEFT)
+                .attr('y', MARGIN.TOP / 2)
+                .attr('dy', 8)
+                .text('CLIMATE HAZARDS');
+
+            svg.append("text")
+                .attr('class', 'title-top')
+                .attr('id', 'title-top-tt')
+                .attr("text-anchor", 'middle')
+                .attr('y', MARGIN.TOP / 2)
+                .attr('dy', 8)
+                .text('TRANSMISSION TYPE');
+
+            svg.append("text")
+                .attr('class', 'title-top')
+                .attr('id', 'title-top-pathogen')
+                .attr("text-anchor", 'middle')
+                .attr('y', MARGIN.TOP / 2)
+                .attr('dy', 8)
+                .text('DISEASE | PATHOGEN');
+
+            updateD3();
+        }
+
+
+        function updateD3(isEntireGraph){
+
+            let {nodes, links} = sankey();
+
+            if (isEntireGraph === undefined || isEntireGraph === true) {
+                NODE_BOTTOM_Y = 0;
+
+                // arrange transmission types and pathogens
+                const nodeById = new Map(nodes.map((d, i) => [d.id, d]));
+                ttGeneralFrameHeights = updateNodePosition(nodes, 1, 4, nodeById);
+                pathogenGeneralFrameHeights = updateNodePosition(nodes, 5, 6, nodeById);
+
+                // arrange climatic nodes
+                let prevY = 0;
+                nodes.forEach(function (d) {
+                    if (d.m_layer > 0) {
+                        return false; // stop iteration
+                    }
+
+                    d.y1 = prevY + NODE_MARGIN * 2 + d.y1 - d.y0;
+                    d.y0 = prevY + NODE_MARGIN * 2;
+
+                    prevY = d.y1;
+                    NODE_BOTTOM_Y = Math.max(NODE_BOTTOM_Y, d.y1);
+                });
+
+                // display node categories
+                $(".cndce-sankey__node_category").show();
+                $(".title-top").show();
+
+                // recalculate links position
+                let updatedGraph = sankey.update({nodes, links});
+                links = updatedGraph.links;
+
+                // svg height
+                svg.attr('height', Math.floor(NODE_BOTTOM_Y + MARGIN.TOP + MARGIN.BOTTOM));
+            } else {
+                // hide node categories
+                $(".cndce-sankey__node_category").hide();
+                $(".title-top").hide();
+            }
+
+            // ------ Display labels of nodes ------
+            const svgLabels = svg.select('.cndce-sankey__labels')
+                .selectAll('.cndce-sankey__label')
+                .data(nodes, d => d.id);
+
+            const textAlign = d => {
+                if(d.x1 < WIDTH / 2){
+                    d.textAnchor = 'start';
+                    return d.x1 + 6;
+                }
+
+                d.textAnchor = 'end';
+                return d.x0 - 6;
+            };
+
+            svgLabels.enter()
+                .append("text")
+                .attr('class', 'cndce-sankey__label')
+                .attr("x", textAlign)
+                .attr("y", d => (d.y1 + d.y0) / 2)
+                .attr("dy", "0.35em")
+                .attr("text-anchor", d => d.textAnchor)
+                .attr("opacity", d => persistActive && !d.active ? 0 : 1)
+                .text(d => d.name)
+                .append("tspan")
+                .attr("fill-opacity", 0.7)
+                .text(d => ' ' + d.diseases.toLocaleString());
+
+            svgLabels
+                .transition()
+                .duration(nodes.length < NODE_TRANSITION_LIMIT ? TRANSITION_DURATION : 0)
+                .attr("x", textAlign)
+                .attr("y", d => (d.y1 + d.y0) / 2);
+                // .attr("text-anchor", d => d.textAnchor)
+                //.attr("opacity", d => persistActive && !d.active ? 0 : 1)
+
+            svgLabels
+                .attr('text-anchor', d => d.textAnchor)
+                .select("tspan")
+                .text(d => {
+                    return ' ' + d.diseases.toLocaleString();
+                });
+
+            svgLabels.exit().remove();
+
+            // ------ Display nodes ------
+            const svgNodes = svg.select('.cndce-sankey__nodes')
+                .selectAll('.cndce-sankey__node')
+                .data(nodes, d => d.id);
+
+            svgNodes.enter()
+                .append("rect")
+                .attr("x", d => d.x0 + 1)
+                .attr("y", d => d.y0)
+                .attr("height", d => Math.max(d.y1 - d.y0, 3))
+                .attr("width", d => d.x1 - d.x0 - 2)
+                .attr("class", "cndce-sankey__node")
+                .attr("data-node-id", d => d.id)
+                .style("fill", d => {
+                    if (d.general_id !== undefined) {
+                        return d.id > 30000 ? redColors[d.general_id] : blueColors[d.general_id];
+                    } else {
+                        return 'green';
+                    }
+                })
+                //.attr("data-type", d => d.type)
+                .attr("opacity", d => persistActive && !d.active ? 0 : 1)
+                .on('mouseover', handleNodeMouseOver)
+                .on('mouseout', handleNodeMouseOut)
+                .on('click', handleNodeClick)
+                .append("title")
+                .text(d => `${d.name}\n${d.diseases.toLocaleString()}`); // (${d.value.toLocaleString()})
+
+            svgNodes
+                .transition()
+                .duration(nodes.length < NODE_TRANSITION_LIMIT ? TRANSITION_DURATION : 0)
+                .attr("x", d => d.x0 + 1)
+                .attr("y", d => d.y0)
+                .attr("height", d => Math.max(d.y1 - d.y0, 3))
+                .attr("width", d => d.x1 - d.x0 - 2)
+                .select("title")
+                .text(d => `${d.name}\n${d.diseases.toLocaleString()}`); // (${d.value.toLocaleString()})
+                //.attr("opacity", d => persistActive && !d.active ? 0 : 1)
+                //.text(d => `${d.name}\n${d.value.toLocaleString()}`);
+
+            svgNodes.exit().remove();
+
+            // ------ Display links between nodes ------
+            const svgLinks = svg.select('.cndce-sankey__links')
+                .selectAll('.cndce-sankey__link')
+                .data(links, d => d.source.id + ':' + d.target.id);
+
+            svgLinks.enter()
+                .append('path')
+                .attr('class', 'cndce-sankey__link')
+                .attr("d", d3.sankeyLinkHorizontal())
+                .attr("stroke-width", d => Math.max(1, d.width))
+                .on('click', (e, d) => {
+                    e.stopPropagation();
+                    getEntries(d);
+                })
+                .append("title")
+                .text(function(d) {
+                    return d.source.name + " ➔ " + d.target.name + "\n" + d.value;
+                });
+
+            svgLinks
+                .transition()
+                .duration(nodes.length < NODE_TRANSITION_LIMIT ? TRANSITION_DURATION : 0)
+                .attr("d", d3.sankeyLinkHorizontal())
+                .attr("stroke-width", d => Math.max(1, d.width))
+                .select("title")
+                .text(function(d) {
+                    return d.source.name + " ➔ " + d.target.name + "\n" + d.value;
+                });
+
+            svgLinks.exit().remove();
+
+
+            // ------ Transmission type categories ------
+            let usedGenerals = [], sumHeight = 0;
+            for (let i in ttGeneralFrameHeights) {
+                g_ttGenerals[i].idx = i;
+                g_ttGenerals[i].top = sumHeight;
+                g_ttGenerals[i].height = ttGeneralFrameHeights[i];
+                usedGenerals.push(g_ttGenerals[i]);
+                sumHeight += ttGeneralFrameHeights[i];
+            }
+            let ttGenerals = svg.select('.cndce-sankey__node_categories')
+                .selectAll('.cndce-sankey__node_category')
+                .data(usedGenerals, d => d.id);
+
+            let leftPos = Math.floor(WIDTH / (m_layerCount - 1)) * 0.8 + MARGIN.LEFT;
+            let groupWidth = Math.floor(WIDTH / (m_layerCount - 1)) * (m_transTypeLayers - 0.6);
+
+            ttGenerals = ttGenerals.enter()
+                .append("g")
+                .attr("class", "cndce-sankey__node_category")
+                .attr("transform", (d, i) => `translate(${leftPos}, ${d.top})`);
+
+            ttGenerals.append("rect")
+                .attr("height", (d, i) => {
+                    return d.height;
+                })
+                .attr("width", groupWidth)
+                .attr("fill", (d, i) => blueColors[d.idx]);
+
+            ttGenerals.append("rect")
+                .attr("class", "general-title")
+                .attr("x", 5)
+                .attr("y",  5)
+                .attr("width", groupWidth - 10)
+                .attr("height", NODE_CATEGORY_MARGIN - 10)
+                .attr("fill", (d, i) => blueColors[d.idx]);
+
+            ttGenerals.append("text")
+                .attr("x", groupWidth / 2)
+                .attr("y",  NODE_CATEGORY_MARGIN / 2)
+                .attr("dy", 3)
+                .attr("text-anchor", "middle")
+                .text((d, i) => d.name);
+
+            // ------ Pathogen categories ------
+            usedGenerals = [];
+            sumHeight = 0;
+            for (let i in pathogenGeneralFrameHeights) {
+                g_pathogenGenerals[i].idx = i;
+                g_pathogenGenerals[i].top = sumHeight;
+                g_pathogenGenerals[i].height = pathogenGeneralFrameHeights[i];
+                usedGenerals.push(g_pathogenGenerals[i]);
+                sumHeight += pathogenGeneralFrameHeights[i];
+            }
+
+            let pathogenGenerals = svg.select('.cndce-sankey__node_categories')
+                .selectAll('.cndce-sankey__node_category')
+                .data(usedGenerals, d => d.id);
+
+            leftPos = Math.floor(WIDTH / (m_layerCount - 1)) * (m_transTypeLayers + 0.8) - 20 + MARGIN.LEFT;
+            groupWidth = Math.floor(WIDTH / (m_layerCount - 1)) * (m_pathogenLayers - 0.6);
+
+            pathogenGenerals = pathogenGenerals.enter()
+                .append("g")
+                .attr("class", "cndce-sankey__node_category")
+                .attr("transform", (d, i) => `translate(${leftPos}, ${d.top})`);
+
+            pathogenGenerals.append("rect")
+                .attr("height", (d, i) => {
+                    return d.height;
+                })
+                .attr("width", groupWidth)
+                .attr("fill", (d, i) => redColors[d.idx])
+                .attr("opacity", 0.3);
+
+            pathogenGenerals.append("rect")
+                .attr("class", "general-title")
+                .attr("x", 5)
+                .attr("y",  5)
+                .attr("width", groupWidth - 10)
+                .attr("height", NODE_CATEGORY_MARGIN - 10)
+                .attr("fill", (d, i) => redColors[d.idx]);
+
+            pathogenGenerals.append("text")
+                .attr("x", groupWidth / 2)
+                .attr("y",  NODE_CATEGORY_MARGIN / 2)
+                .attr("dy", 3)
+                .attr("text-anchor", "middle")
+                .text((d, i) => d.name);
+
+            // x-position of titles
+            svg.select("#title-top-tt")
+                .attr('x', Math.floor(WIDTH / (m_layerCount - 1)) * (1 + (m_transTypeLayers - 1) / 2) + MARGIN.LEFT);
+
+            svg.select("#title-top-pathogen")
+                .attr('x', Math.floor(WIDTH / (m_layerCount - 1)) * (1 + m_transTypeLayers + (m_pathogenLayers - 1) / 2) + MARGIN.LEFT);
+        }
+
+        function drawActiveLinks(d) {
+
+            $("path.cndce-sankey__link").removeClass("cndce-sankey__link__invisible");
+            $("path.cndce-sankey__link").removeClass("cndce-sankey__link__highlight");
+
+            if (d) {
+                $("path.cndce-sankey__link").addClass("cndce-sankey__link__invisible");
+
+                let highlightGraph = getHighlightGraph(d);
+                svg.select('.cndce-sankey__links')
+                    .selectAll('.cndce-sankey__link')
+                    .data(highlightGraph.links, d => d.source.id + ':' + d.target.id)
+                    .attr('class', 'cndce-sankey__link cndce-sankey__link__highlight');
+            }
+
+            window.sankey = sankey;
+        }
+
+        function customNodeAlign(node, n) {
+            //console.log(node.name, '-', node.layer, '-', node.m_layer, '-', d3.sankeyJustify(node, n));
+            return node.m_layer == -1 ? d3.sankeyJustify(node, n) : m_layerIndexes[node.m_layer];
+        }
+
+        function traverseNode(node, keyNodeNext = 'source', keyLinkNext = 'targetLinks'){
+
+            var nodes = [node];
+            var links = [];
+
+            node[keyLinkNext].forEach((d, i)=>{
+                links.push(d);
+
+                const sourceGraph = traverseNode(d[keyNodeNext], keyNodeNext, keyLinkNext);
+
+                sourceGraph.nodes.forEach(n=>{
+                    if(nodes.indexOf(n) == -1){
+                        nodes.push(n)
+                    }
+                });
+
+                sourceGraph.links.forEach(l=>{
+                    if(links.indexOf(l) == -1){
+                        links.push(l)
+                    }
+                });
+            });
+
+            return {nodes, links};
+        }
+
+        function getHighlightGraph(d) {
+
+            // filter by node-id
+            let linkCodes = [];
+            activeLinkCodes.forEach(function (linkCode, i) {
+                if (d && linkCode.indexOf(d.id) === -1) {
+                    return;
+                }
+                linkCodes.push(linkCode);
+            });
+
+            // collect information from link-codes
+            // - links between nodes
+            let EMPTY_NODE = '00000';
+            let linksFrequencies = {};
+            let src = EMPTY_NODE, dest = EMPTY_NODE;
+            linkCodes.forEach(function (linkCode, i) {
+                let linkedNodes = linkCode.split('-');
+                let nodeID;
+                src = EMPTY_NODE;
+                dest = EMPTY_NODE;
+
+                for (let i = 0; i < 7; i ++) {
+                    nodeID = linkedNodes[i];
+                    if (nodeID === EMPTY_NODE || !(nodeID in g_sankeyNodeIDs)) {
+                        continue;
+                    }
+
+                    if (src === EMPTY_NODE) {
+                        src = linkedNodes[i];
+                        continue;
+                    } else {
+                        dest = linkedNodes[i];
+                    }
+
+                    // link value
+                    src = src + "-" + dest;
+                    linksFrequencies[src] = 1;
+
+                    // new src = last dest
+                    src = dest;
+                }
+            });
+
+            let links = [], linkCode;
+            activeGraph.links.forEach(d => {
+                linkCode = d.source.id + "-" + d.target.id;
+                if (linksFrequencies[linkCode]) {
+                    links.push(d);
+                }
+            });
+
+            return {links};
+
+            //const sourceActive = traverseNode(d);
+            //const targetActive = traverseNode(d, 'target', 'sourceLinks');
+
+            //**
+            // *
+            // * Remove duplicate current node - current node exists
+            // * in both sourceActive and targetActive
+            // *
+            // */
+            //sourceActive.nodes.shift();
+
+            //return {
+            //   nodes: [
+            //       ...sourceActive.nodes,
+            //       ...targetActive.nodes
+            //   ],
+            //   links: [
+            //       ...sourceActive.links,
+            //       ...targetActive.links
+            //   ]
+            //}
+        }
+
+        function getActiveGraph(d){
+
+            // filter by node-id
+            let linkCodes = [];
+            activeLinkCodes.forEach(function (linkCode, i) {
+                if (d && linkCode.indexOf(d.id) === -1) {
+                    return;
+                }
+                linkCodes.push(linkCode);
+            });
+            activeLinkCodes = linkCodes;
+
+            // collect information from link-codes
+            // - links between nodes
+            // - node weight
+            // - node layer
+            let EMPTY_NODE = '00000';
+            let nodeLayers = {};
+            let nodeWeights = {};
+            let linksFrequencies = {};
+            let src = EMPTY_NODE, dest = EMPTY_NODE;
+            linkCodes.forEach(function (linkCode, i) {
+                let linkedNodes = linkCode.split('-');
+                let nodeID, diseaseID = linkedNodes[5]; // pathogen_specific_id
+                src = EMPTY_NODE;
+                dest = EMPTY_NODE;
+
+                for (let i = 0; i < 7; i ++) {
+                    nodeID = linkedNodes[i];
+                    if (nodeID === EMPTY_NODE || !(nodeID in g_sankeyNodeIDs)) {
+                        continue;
+                    }
+
+                    // nodes' layer number
+                    nodeLayers[nodeID] = i;
+
+                    // nodes' weights - number of unique disease = pathogen_specific_id
+                    if (nodeWeights[nodeID] === undefined) {
+                        nodeWeights[nodeID] = [diseaseID];
+                    } else if (nodeWeights[nodeID].indexOf(diseaseID) === -1) {
+                        nodeWeights[nodeID].push(diseaseID);
+                    }
+
+                    if (src === EMPTY_NODE) {
+                        src = linkedNodes[i];
+                        continue;
+                    } else {
+                        dest = linkedNodes[i];
+                    }
+
+                    // link value
+                    src = src + "-" + dest;
+                    (src in linksFrequencies) ? (linksFrequencies[src] ++) : (linksFrequencies[src] = 1);
+
+                    // new src = last dest
+                    src = dest;
+                }
+            });
+
+            let nodes = [], links = [];
+            g_sankeyNodes.forEach(function (d, i) {
+                if (nodeWeights[d.id] === undefined || nodeLayers[d.id] === undefined) {
+                    return;
+                }
+                //d = {...d}; // cloning
+                d.m_layer = nodeLayers[d.id];
+                d.diseases = nodeWeights[d.id].length;
+                nodes.push(d);
+            });
+
+            for (let linkCode in linksFrequencies) {
+                [src, dest] = linkCode.split('-');
+                links.push({
+                    source: src,
+                    target: dest,
+                    value:  linksFrequencies[linkCode]
+                });
+            }
+
+            let layerNumbers = [];
+            nodes.forEach(function (node, i) {
+                if (layerNumbers.length == 7) {
+                    return false;
+                }
+                if (node.m_layer === -1
+                    || layerNumbers.indexOf(node.m_layer) != -1
+                ) {
+                    return;
+                }
+                layerNumbers.push(node.m_layer);
+            });
+            layerNumbers.sort();
+            m_layerIndexes = {};
+            m_transTypeLayers = 0;
+            m_pathogenLayers = 0;
+            m_layerCount = layerNumbers.length;
+            for (let i = 0; i < layerNumbers.length; i ++) {
+                m_layerIndexes[layerNumbers[i]] = i;
+                if (layerNumbers[i] > 0 && layerNumbers[i] <= 4) {
+                    m_transTypeLayers ++;
+                }
+                if (layerNumbers[i] >= 5) {
+                    m_pathogenLayers ++;
+                }
+            }
+
+            return {nodes, links};
+        }
+
+        function d3LinkToRawData(d){
+            return {
+                source: d.source.id,
+                target: d.target.id,
+                value: d.value
+            }
+        }
+
+        function d3NodeToRawData(d){
+            var raw = {...d};
+            // var raw = d;
+
+            delete raw.sourceLinks;
+            delete raw.targetLinks;
+            delete raw.value;
+            // delete raw.layer;
+            delete raw.index;
+            delete raw.height;
+            delete raw.depth;
+            delete raw.x0;
+            delete raw.x1;
+            delete raw.y0;
+            delete raw.y1;
+
+            delete raw.m_layer;
+            delete raw.diseases;
+            delete raw.upper_node;
+            delete raw.f_height;
+
+            return raw;
+        }
+
+        function handleEmptyClick(e){
+
+            if (g_isEntireDiagram) {
+                return;
+            }
+
+            e.stopPropagation();
+            location.href = (selectedImpact === '') ? '?' : '?impact=' + selectedImpact;
+
+            // persistActive = false;
+            // m_layerIndexes = {
+            //     0:0, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6
+            // };
+            // m_layerCount = 7;
+            //
+            // activeLinkCodes = g_sankeyLinkCodes;
+            // activeGraph = getActiveGraph();
+            //
+            // sankey
+            //     .nodes(activeGraph.nodes)
+            //     .links(activeGraph.links)
+            //     .nodeAlign(customNodeAlign)
+            //     .extent([[MARGIN.LEFT, MARGIN.TOP],[WIDTH + MARGIN.LEFT, HEIGHT + MARGIN.TOP]]);
+            //
+            // svg
+            //     .attr('width', WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
+            //     .attr('height', HEIGHT + MARGIN.TOP + MARGIN.BOTTOM);
+            //
+            // console.log('empty click');
+            //
+            // updateD3();
+            // drawActiveLinks();
+        }
+
+        function handleNodeClick(e, d){//console.log(d);
+            e.stopPropagation();
+            let nodeType = d.m_layer;
+            let nodeID = d.id - Math.floor(d.id / 10000) * 10000;//console.log(d);return;
+
+            location.href = `?type=${selectedNodeTypes},${nodeType}&id=${selectedNodeIds},${nodeID}`
+				+ (selectedImpact === '' ? '' : '&impact=' + selectedImpact);
+
+            // persistActive = !persistActive;
+            //
+            // // if(persistActive){
+            //
+            // activeGraph = getActiveGraph(d);
+            // const height = Math.max(document.documentElement.clientHeight - MARGIN.TOP - MARGIN.BOTTOM, HEIGHT * activeGraph.nodes.length * 0.0015);
+            // let layerNumbers = [];
+            // activeGraph.nodes.forEach(function (node, i) {
+            //     if (layerNumbers.length == 7) {
+            //         return false;
+            //     }
+            //     if (node.m_layer === -1
+            //         || layerNumbers.indexOf(node.m_layer) != -1
+            //     ) {
+            //         return;
+            //     }
+            //     layerNumbers.push(node.m_layer);
+            // });
+            // layerNumbers.sort();
+            // m_layerIndexes = {};
+            // m_layerCount = layerNumbers.length;
+            // for (let i = 0; i < layerNumbers.length; i ++) {
+            //     m_layerIndexes[layerNumbers[i]] = i;
+            // }
+            //
+            // sankey
+            //     .nodes(activeGraph.nodes)
+            //     .links(activeGraph.links)
+            //     //.nodeAlign(layerNumbers.length == 7 ? customNodeAlign : d3.sankeyJustify)
+            //     .nodeAlign(customNodeAlign)
+            //     .extent([[MARGIN.LEFT, MARGIN.TOP],[WIDTH + MARGIN.LEFT, height]]);
+            //
+            // svg
+            //     .attr('width', WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
+            //     .attr('height', height + MARGIN.TOP + MARGIN.BOTTOM);
+            //
+            // e.stopPropagation();
+            //
+            // updateD3(false);
+            // drawActiveLinks();
+        }
+
+        function handleNodeMouseOver(e, d){
+            // if(persistActive)
+            // 	return;
+
+            drawActiveLinks(d);
+            window.sankey = sankey;
+            window.activeGraph = activeGraph;
+            window.updateD3 = updateD3;
+        }
+
+        function handleNodeMouseOut(e, d){
+            $("path.cndce-sankey__link").removeClass("cndce-sankey__link__invisible");
+            $("path.cndce-sankey__link").removeClass("cndce-sankey__link__highlight");
+        }
+
+    });
+
+	// abbreviated field names
+	// cc    climatic_changes
+	// pg    pathogen_general
+	// ps    pathogen_specific
+	// pa    pathogen_agent
+	// ttg   transmission_type_general
+	// tts   transmission_type_specific
+	// ttss  transmission_type_specific_species
+	// ttsa  transmission_type_specific_additional
+	// ttsas transmission_type_specific_additional_species
+
+	let layerFields = [
+        'cc_id',
+        'tts_id',
+        'ttss_id',
+        'ttsa_id',
+        'ttsas_id',
+        'ps_id',
+        'pa_id'
+    ];
+
+    // Show entries for selected link
+    function getEntries(link) {
+        if (!link) {
+            errordialog('Please choose entry first!');
+            return;
+        }
+        let sourceNode = link.source;
+        let targetNode = link.target;
+
+		loadEntries({
+			rel_field1:    layerFields[sourceNode.m_layer],//'pathogen_specific_id',
+			rel_field1_id: sourceNode.id,
+			rel_field2:    layerFields[targetNode.m_layer],//'pathogen_specific_id',
+			rel_field2_id: targetNode.id
+		});
+    }
+
+    /**
+	 * Filter entries by link information
+	 */
+    function filterEntries(link) {
+    	let filters = {};
+    	for (let layer in selectedNodes) {
+			filters[layerFields[layer]] = selectedNodes[layer];
+		}
+		filters[link.rel_field1] = link.rel_field1_id; // overrideable
+		filters[link.rel_field2] = link.rel_field2_id; // overrideable
+		for (let field in filters) {
+			filters[field] = filters[field] - Math.floor(filters[field] / 10000) * 10000;
+		}
+
+    	let entries = g_allEntries.filter(function(entry) {
+    		for (let field in filters) {
+    			if (entry[field] != filters[field]) return false;
+			}
+    		return true;
+		});
+
+    	showEntries(entries);
+	}
+
+    /**
+	 * Display entries
+	 *
+	 * @param entries
+	 */
+    function showEntries(entries) {
+
+    	if (entries.length === 0) {
+			warningdialog("Entries not found!");
+			return;
+		}
+
+		let html='<div class="container"><h2 class="text-center text-bold"></h2><div class="panel-group">';
+		$.each(entries, function(idx, entry) {
+			let subhtml = '';
+			let source = '';
+			let climatic_changes = '';
+			let pathogens = '';
+			let transmission_types = '';
+
+			if (entry.cc!="" && entry.cc!=null) {
+				climatic_changes = entry.cc;
+			}
+			if (entry.authors!="" && entry.authors!=null) {
+				source += entry.authors;
+			}
+			if (entry.year!="" && entry.year!=null) {
+				source+=', '+entry.year;
+			}
+			if (entry.title!="" && entry.title!=null) {
+				source+=', '+entry.title;
+			}
+			if (entry.pg!="" && entry.pg!=null) {
+				pathogens += entry.pg;
+			}
+			if (entry.ps!="" && entry.ps!=null) {
+				pathogens+=', '+entry.ps;
+			}
+			if (entry.pa!="" && entry.pa!=null) {
+				pathogens+=', '+entry.pa;
+			}
+			if (entry.ttg!="" && entry.ttg!=null) {
+				transmission_types+=entry.ttg;
+			}
+			if (entry.tts!="" && entry.tts!=null) {
+				transmission_types+=','+entry.tts;
+			}
+			if (entry.ttss!="" && entry.ttss!=null) {
+				transmission_types+='('+entry.ttss+')';
+			}
+			if (entry.ttsa!="" && entry.ttsa!=null) {
+				transmission_types+=', '+entry.ttsa;
+			}
+			if (entry.ttsas!="" && entry.ttsas!=null)  {
+				transmission_types+='('+entry.ttsas+')';
+			}
+
+			subhtml+='<p><b>Entry ID:</b>'+entry.id+'</p>';
+			subhtml+='<p><b>Source:</b>'+source+'</p>';
+			subhtml+='<p><b>Climatic Change:</b>'+climatic_changes+'</p>';
+			subhtml+='<p><b>Pathogen:</b>'+pathogens+'</p>';
+			subhtml+='<p><b>Transmission Type:</b>'+transmission_types+'</p>';
+
+			if (entry.impact!="" && entry.impact!=null) {
+				subhtml+='<p><b>Impacts:</b>'+entry.impact+'</p>';
+			}
+			subhtml+='<p><b>Comments/Finding:</b><br>'+entry.comments+'</p>';
+			subhtml+='<hr>';
+			if (entry.user!="" && entry.user!=null) {
+				//let linkGen=(elm.isLogin==="1"?"http://diseaseproject.impactsofclimatechange.org/index.php/paper/add/"+elm.reference_id+"/"+elm.id:"javascript:errordialog('Please Login First!');");
+				subhtml+='<p class="text-right"><b>Enter By :</b><br>'+entry.user+'<br>'; // <a href="'+linkGen+'">Edit</a>
+				if (entry.PDF != "" && entry.PDF != null) {
+					subhtml+='<a target="_blank" href="PDFs/'+entry.PDF+'">Download</a>';
+				}
+				subhtml+='</p>';
+			}
+			html+='<div class="panel panel-default">\
+				  <div id="collapse'+idx+'" class="panel-collapse">\
+					<div class="panel-body">'+subhtml+'</div>\
+				  </div>\
+				  </div>';
+		});
+		html+='</div></div></div>';
+		$.fancybox.open(html);
+	}
+
+    function sumHeight(parentHeight, nodeHeight) {
+        return !parentHeight || parentHeight === 0 ? nodeHeight : parentHeight + NODE_MARGIN + nodeHeight;
+    }
+
+    let ttGeneralFrameHeights = {};
+    let pathogenGeneralFrameHeights = {};
+    function updateNodePosition(nodes, minLayer, maxLayer, nodeById) {
+        // initialize frame height of each node
+        nodes.forEach((node, i) => {
+            nodes[i].f_height = 0;
+        });
+
+        let _generalFrameHeights = {};
+
+        // calculate frame height for each node, by adding height of child nodes
+        let hasParentNode = true;
+        for (let layer = maxLayer; layer >= minLayer; layer--) {
+            nodes.forEach((node, i) => {
+                if (node.m_layer != layer) {
+                    return;
+                }
+
+                let nodeHeight = Math.max(node.y1 - node.y0, 3);
+                if (node.f_height < nodeHeight) {
+                    nodes[i].f_height = nodeHeight;
+                }
+
+                hasParentNode = false;
+                for (let i = 0; i < node.targetLinks.length; i++) {
+                    if (node.targetLinks[i].source.m_layer < 1) {
+                        continue;
+                    }
+                    hasParentNode = true;
+                    node.targetLinks[i].source.f_height = sumHeight(node.targetLinks[i].source.f_height, nodeHeight);
+                    //break;
+                }
+            });
+        }
+        //console.log(ttGeneralFrameHeights);
+
+        // update node y-position
+        let lastGeneralID = -1;
+        let generalTopY = -1;
+        nodes.forEach((node, i) => {
+            if (node.m_layer < minLayer || node.m_layer > maxLayer) {
+                return;
+            }
+
+            let yPos = 0, upperNode;
+            if (node.upper_node == -1) {
+                yPos = 0;
+            } else {
+                upperNode = nodeById.get(node.upper_node);
+                yPos = upperNode.y0 + upperNode.f_height + NODE_MARGIN;
+                //console.log(upperNode.name + " ↓ " + node.name + ' : ' + upperNode.y0 + ' + ' + upperNode.f_height + ' + ' +nodeMargin + " = " + yPos);
+            }
+
+            // boundary between two generals - node category
+            if (node.m_layer == minLayer
+                && node.general_id != lastGeneralID
+                && yPos > generalTopY
+            ) {
+                if (lastGeneralID >= 0) {
+                    _generalFrameHeights[lastGeneralID] = yPos - generalTopY;
+                }
+                generalTopY = yPos;
+                lastGeneralID = node.general_id;
+            }
+            if (yPos == 0 || yPos == generalTopY) {
+                yPos += NODE_CATEGORY_MARGIN;
+            }
+
+            // update node's y position
+            node.y1 = yPos + node.y1-node.y0;//node.height
+            node.y0 = yPos;
+            NODE_BOTTOM_Y = Math.max(NODE_BOTTOM_Y, node.y1);
+        });
+        NODE_BOTTOM_Y += 8 + NODE_MARGIN;
+        if (lastGeneralID == -1) {
+            return _generalFrameHeights;
+        }
+        _generalFrameHeights[lastGeneralID] = NODE_BOTTOM_Y - generalTopY;
+
+        return _generalFrameHeights;
+    }
+
+    $("#btn-filter").click(function() {
+    	let val = $("select[name=filter_impact]").val();
+        location.href = (val !== '') ? '?impact=' + val : '?';
+    });
+
+	/**
+	 * Parse url parameters
+	 */
+	function parseParams() {
+		const urlSearchParams = new URLSearchParams(window.location.search);
+		const params = Object.fromEntries(urlSearchParams.entries());
+		selectedNodeTypes = params['type'] ? params['type'].split(',') : [];
+		selectedNodeIds = params['id'] ? params['id'].split(',') : [];
+		selectedImpact = params['impact'] ? params['impact'] : '';
+
+		let typeAndIds = {}, type;
+		for (let i = 0; i < selectedNodeTypes.length; i++) {
+			type = selectedNodeTypes[i];
+			if (type.length === 0 || isNaN(parseInt(type)) || !selectedNodeIds[i]) {
+				continue;
+			}
+
+			typeAndIds[type] = (type == 0 ? '1' : (type > 4 ? '3' : '2')) // 0: Climate hazards, 1~
+					+ ('0000' + selectedNodeIds[i]).substr(-4);
+		}
+		return typeAndIds;
+	}
+
+	/**
+	 * Load entire entries
+	 *
+	 * @param link
+	 */
+	function loadEntries(link) {
+		if (g_allEntries.length > 0) {
+			filterEntries(link);
+			return;
+		}
+
+		$.ajax({
+			url: 'json/entries.json',
+			type: "get",
+			dataType: "json",
+			/*headers: {
+				'Content-Encoding': 'gzip',
+				'Accept-Encoding': 'deflate',
+			},*/
+			success: function(entries) {
+				g_allEntries = entries;
+				if (link) {
+					filterEntries(link);
+				}
+			}
+		});
+	}
+
+</script></div>
+</div>
+
+
+
+
+<!-- Custom Dialogs -->	  
+		<!-- Confirm -->	
+	    <div id='confirmDb' class="dialogDiv"> 
+			<div class='title' id="confirmMsg">
+			</div> 
+			<hr>
+			<input type='button' class="btn text-bold btn-danger text-white" value='no' id='cancelConfirmBtn' />
+			<input type='button' class="btn text-bold btn-success text-white pull-right" value='yes' id='confirmBtn' />
+		</div>
+		
+		
+		<!-- Warning -->
+	    <div id='warnDb' class="dialogDiv"> 
+			<div class='title' id="warnMsg">
+			</div>
+			<hr>			
+			<input type='button' class="btn btn-warning text-bold btn-info text-white pull-right" value='OK' id='warnBtn' />
+		</div>
+		
+		
+		<!-- Error -->
+	    <div id='errorDb' class="dialogDiv"> 
+			<div class='title' id="errorMsg">
+			</div>
+			<hr>		
+			<input type='button' class="btn text-bold btn-danger text-white pull-right" value='OK' id='errorBtn' />
+		</div>
+		
+		<!-- Success -->
+	    <div id='successDb' class="dialogDiv"> 
+			<div class='title' id="succMsg">
+			</div>
+			<hr>			
+			<input type='button' class="btn btn-success text-bold text-white pull-right" value='OK' id='succBtn' />
+		</div>
+
+<!-- Custom Dialogs -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(".ajax_loader").hide();
+	$(document).ajaxStart(function(){
+		$(".ajax_loader").show();
+	});
+	$(document).ajaxComplete(function(){
+		$(".ajax_loader").hide();
+	});
+	$(document).ready(function(){
+		$('.show_popup').on("click", function(e){
+			e.preventDefault();
+			$('a.show_popup').fancybox({
+				'type' : 'iframe',
+			});
+		});
+		$('.show_popup').trigger("click");
+	});
+
+	//warningdialog();
+	function warningdialog(message="Are You Sure?",btnYes="OK",dialTitle="Warning") {
+
+		$('#warnMsg').html(message);
+		$("#warnBtn").val(btnYes);
+		var warndialog = $('#warnDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#E08E0B !important;color:white !important;");
+		$('#warnBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			warndialog.dialog('close');
+		});
+	}
+	//errordialog();
+	function errordialog(message="Are You Sure?",btnYes="OK",dialTitle="Error") {
+
+		$('#errorMsg').html(message);
+		$("#errorBtn").val(btnYes);
+		var errordialog = $('#errorDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#D73925 !important;color:white !important;");
+		$('#errorBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			errordialog.dialog('close');
+		});
+	}
+
+	//successdialog();
+	function successdialog(message="Are You Sure?", btnYes="OK",dialTitle="Success") {
+
+		$('#succMsg').html(message);
+		$("#succBtn").val(btnYes);
+		var succdialog = $('#successDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#00A65A !important;color:white !important;");
+		$('#succBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			succdialog.dialog('close');
+		});
+	}
+</script>
+
+</body>
+</html>

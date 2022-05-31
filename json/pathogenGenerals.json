@@ -1,0 +1,70 @@
+[
+  {
+    "id": "30058",
+    "name": "0│Unspecified"
+  },
+  {
+    "id": "30877",
+    "name": "Animalia | Chordata"
+  },
+  {
+    "id": "30019",
+    "name": "1│Bacteria"
+  },
+  {
+    "id": "30022",
+    "name": "2│Virus"
+  },
+  {
+    "id": "30062",
+    "name": "3│Fungus"
+  },
+  {
+    "id": "30033",
+    "name": "4│Protozoa"
+  },
+  {
+    "id": "30151",
+    "name": "5│Animalia │ Nematodes"
+  },
+  {
+    "id": "30351",
+    "name": "6│Animalia │ Platyhelminthes"
+  },
+  {
+    "id": "30455",
+    "name": "7│Animalia │ Arthropoda"
+  },
+  {
+    "id": "30709",
+    "name": "8| Animalia │ Cnidaria"
+  },
+  {
+    "id": "30679",
+    "name": "9|Animalia │ Trematodes "
+  },
+  {
+    "id": "30865",
+    "name": "10│ Animalia │ Vertebrate"
+  },
+  {
+    "id": "30458",
+    "name": "11│Chromista │ Dinoflagellata"
+  },
+  {
+    "id": "30699",
+    "name": "12| Eukaryota │ Amoebozoa"
+  },
+  {
+    "id": "30652",
+    "name": "13| Mesomycetozoea"
+  },
+  {
+    "id": "30796",
+    "name": "14| Eukaryota │ Percolozoa"
+  },
+  {
+    "id": "30267",
+    "name": "15│Plants"
+  }
+]

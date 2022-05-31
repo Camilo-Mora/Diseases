@@ -1,0 +1,26 @@
+[
+  {
+    "id": "20043",
+    "name": "0│Not specified"
+  },
+  {
+    "id": "20029",
+    "name": "1│Vector-borne"
+  },
+  {
+    "id": "20025",
+    "name": "2│Water-borne"
+  },
+  {
+    "id": "20027",
+    "name": "3│Food-borne"
+  },
+  {
+    "id": "20048",
+    "name": "4│Air-borne"
+  },
+  {
+    "id": "20067",
+    "name": "5│Direct contact"
+  }
+]

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Human Impacts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+  <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <!-- <link rel="manifest" href="assets/images/site.webmanifest"> -->
+
+  <style>
+	.header {display: flex;justify-content:space-between;align-items:center;width:100%;padding:15px;}
+	.logo {text-decoration: none;}
+	.logo img {width: 200px;}
+	.header h1 {width: calc(100% - 210px);margin:0;padding:0;text-align: center;font-size:32px;}
+  </style>
+</head>
+<body>
+<div style="padding-top: 0; padding-bottom: 50px;">
+	<div class="ajax_loader">
+		<img src="assets/images/loading.gif" style="width: 100px; height:100px;">
+	</div>
+	<div class="ajax_loader_2">
+		<img src="assets/images/loading.gif" style="width: 100px; height:100px;">
+	</div>
+	<div class="header">
+		<a class="logo" href="https://camilo-mora.github.io/GEO309/" target="_blank">
+			<img src="https://camilo-mora.github.io/GEO309/images/MoraLab.png" />
+		</a>
+		<h1> Traceable evidence of the impacts of climate change on pathogenic human diseases </h1>
+	</div>
+
+	<!-- page contents -->
+	<div class="container-fluid">
+		<div class="content-box">
+			<div class="panel panel-default">
+				<div class="panel-heading clearfix">
+					<span>Entries</span>
+					<a href="index.html" class="pull-right btn btn-info">Back</a>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-bordered custom-table" id="listTable">
+							<thead>
+							<tr>
+								<th style="width: 50px;">Sr.No</th>
+								<th>Authors</th>
+								<th>Year</th>
+								<th>Title</th>
+								<th>PDF</th>
+								<th>Climatic Changes</th>
+								<th>Transmission Type</th>
+								<th>Pathogen</th>
+								<th>Impact</th>
+								<th>Comments/Finding</th>
+								<th>Entered By</th>
+								<!--<th style="width: 100px;">Action</th>-->
+							</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery-3.4.1.min.js"></script>
+		<script src="assets/js/jquery.dataTables.min.js"></script>
+		<script>
+			let g_allEntries = [];
+			function buildTable() {
+				$('#listTable').dataTable().fnDestroy();
+				$('#listTable').DataTable({
+					data: g_allEntries,
+					"columns" : [
+						{ "data" : "id" },
+						{ "data" : "authors" },
+						{ "data" : "year" },
+						{ "data" : "title" },
+						{ "data" : "PDF" },
+						{ "data" : "cc" },
+						{ "data" : "ttg" },
+						{ "data" : "pg" },
+						{ "data" : "impact" },
+						{ "data" : "comments" },
+						{ "data" : "user" },
+					],
+					columnDefs: [/*{
+						"targets": -1,
+						"data": null,
+						"orderable": false,
+						"defaultContent": "<button type=\"button\" class=\"btn btn-sm btn-secondary\">追加</button>"
+					}*/{
+						"targets": 4,
+						"data" : "PDF",
+						"render": function ( data, type, row, meta ) {
+							return '<a href="PDFs/' + data + '" target="_blank">PDF</a>';
+						}
+					},{
+						"targets": 6,
+						"data" : "ttg",
+						"render": function ( data, type, row, meta ) {
+							let items = [];
+							if (row.ttg) items.push(row.ttg);
+							if (row.tts) items.push(row.tts);
+							if (row.ttss) items.push(row.ttss);
+							if (row.ttsa) items.push(row.ttsa);
+							if (row.ttsas) items.push(row.ttsas);
+							return items.join('<br>↓<br>');
+						}
+					},{
+						"targets": 7,
+						"data" : "pg",
+						"render": function ( data, type, row, meta ) {
+							let items = [];
+							if (row.pg) items.push(row.pg);
+							if (row.ps) items.push(row.ps);
+							if (row.pa) items.push(row.pa);
+							return items.join('<br>↓<br>');
+						}
+					}],
+
+				});
+			}
+			function loadEntries() {
+				$.ajax({
+					url: 'json/entries.json',
+					type: "get",
+					dataType: "json",
+					success: function(entries) {
+						g_allEntries = entries;
+						buildTable();
+					}
+				});
+			}
+			loadEntries();
+			//$(".container").first().attr('class','container-fluid');
+		</script>
+	</div>
+	<!-- end of page contents -->
+</div>
+
+
+
+	<!-- Custom Dialogs -->
+	<!-- Confirm -->
+	<div id='confirmDb' class="dialogDiv">
+		<div class='title' id="confirmMsg">
+		</div>
+		<hr>
+		<input type='button' class="btn text-bold btn-danger text-white" value='no' id='cancelConfirmBtn' />
+		<input type='button' class="btn text-bold btn-success text-white pull-right" value='yes' id='confirmBtn' />
+	</div>
+
+
+	<!-- Warning -->
+	<div id='warnDb' class="dialogDiv">
+		<div class='title' id="warnMsg">
+		</div>
+		<hr>
+		<input type='button' class="btn btn-warning text-bold btn-info text-white pull-right" value='OK' id='warnBtn' />
+	</div>
+
+
+	<!-- Error -->
+	<div id='errorDb' class="dialogDiv">
+		<div class='title' id="errorMsg">
+		</div>
+		<hr>
+		<input type='button' class="btn text-bold btn-danger text-white pull-right" value='OK' id='errorBtn' />
+	</div>
+
+	<!-- Success -->
+	<div id='successDb' class="dialogDiv">
+		<div class='title' id="succMsg">
+		</div>
+		<hr>
+		<input type='button' class="btn btn-success text-bold text-white pull-right" value='OK' id='succBtn' />
+	</div>
+	<!-- Custom Dialogs -->
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(".ajax_loader").hide();
+	$(document).ajaxStart(function(){
+		$(".ajax_loader").show();
+	});
+	$(document).ajaxComplete(function(){
+		$(".ajax_loader").hide();
+	});
+	$(document).ready(function(){
+		$('.show_popup').click(function(e){
+			e.preventDefault();
+			$('a.show_popup').fancybox({
+				'type' : 'iframe',
+			});
+		});
+	});
+
+	//warningdialog();
+	function warningdialog(message="Are You Sure?",btnYes="OK",dialTitle="Warning") {
+
+		$('#warnMsg').html(message);
+		$("#warnBtn").val(btnYes);
+		var warndialog = $('#warnDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#E08E0B !important;color:white !important;");
+		$('#warnBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			warndialog.dialog('close');
+		});
+	}
+	//errordialog();
+	function errordialog(message="Are You Sure?",btnYes="OK",dialTitle="Error") {
+
+		$('#errorMsg').html(message);
+		$("#errorBtn").val(btnYes);
+		var errordialog = $('#errorDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#D73925 !important;color:white !important;");
+		$('#errorBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			errordialog.dialog('close');
+		});
+	}
+
+	//successdialog();
+	function successdialog(message="Are You Sure?", btnYes="OK",dialTitle="Success") {
+
+		$('#succMsg').html(message);
+		$("#succBtn").val(btnYes);
+		var succdialog = $('#successDb').dialog();
+		$(".ui-dialog-title").text(dialTitle);
+		$(".ui-dialog-titlebar").attr("style","background-color:#00A65A !important;color:white !important;");
+		$('#succBtn').unbind().click(function(evt) {
+			evt.preventDefault();
+			succdialog.dialog('close');
+		});
+	}
+</script>
+
+</body>
+</html>

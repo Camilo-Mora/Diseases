@@ -1,0 +1,6920 @@
+[
+  {
+    "id": "10000",
+    "name": "None",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10002",
+    "name": "Drought",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10008",
+    "name": "Fires",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10007",
+    "name": "Floods",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10004",
+    "name": "Heatwaves",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10001",
+    "name": "Natural cover change",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10010",
+    "name": "Ocean climate change",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10006",
+    "name": "Precipitation",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10009",
+    "name": "Sea level",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10005",
+    "name": "Storms",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "10003",
+    "name": "Warming",
+    "type": "climatic",
+    "parent": "0",
+    "upper_node": -1
+  },
+  {
+    "id": "20066",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "20043",
+    "is_species": "0",
+    "general_id": 0,
+    "upper_node": -1
+  },
+  {
+    "id": "20339",
+    "name": "Hymenoptera",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20066"
+  },
+  {
+    "id": "20046",
+    "name": "Bats",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20339"
+  },
+  {
+    "id": "20136",
+    "name": "Pigs",
+    "type": "trans",
+    "parent": "20046",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20339"
+  },
+  {
+    "id": "20340",
+    "name": "Pteropus alecto",
+    "type": "trans",
+    "parent": "20046",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20136"
+  },
+  {
+    "id": "20167",
+    "name": "African fruit bat",
+    "type": "trans",
+    "parent": "20046",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20340"
+  },
+  {
+    "id": "20198",
+    "name": "Flying fox",
+    "type": "trans",
+    "parent": "20046",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20167"
+  },
+  {
+    "id": "20197",
+    "name": "Horse",
+    "type": "trans",
+    "parent": "20046",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20167"
+  },
+  {
+    "id": "20122",
+    "name": "Fruitbats",
+    "type": "trans",
+    "parent": "20046",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20198"
+  },
+  {
+    "id": "20155",
+    "name": "Beetle",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20046"
+  },
+  {
+    "id": "20156",
+    "name": "Paederus beetles",
+    "type": "trans",
+    "parent": "20155",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20046"
+  },
+  {
+    "id": "20111",
+    "name": "Birds",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20155"
+  },
+  {
+    "id": "20203",
+    "name": "Mosquito",
+    "type": "trans",
+    "parent": "20111",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20155"
+  },
+  {
+    "id": "20035",
+    "name": "Biting flies",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20111"
+  },
+  {
+    "id": "20115",
+    "name": "Lutzomyia spp",
+    "type": "trans",
+    "parent": "20035",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20111"
+  },
+  {
+    "id": "20225",
+    "name": "phlebotomine sandflies",
+    "type": "trans",
+    "parent": "20035",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20115"
+  },
+  {
+    "id": "20183",
+    "name": "Simulium spp",
+    "type": "trans",
+    "parent": "20035",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20225"
+  },
+  {
+    "id": "20092",
+    "name": "Biting midges",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20035"
+  },
+  {
+    "id": "20093",
+    "name": "Culicoides",
+    "type": "trans",
+    "parent": "20092",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20035"
+  },
+  {
+    "id": "20266",
+    "name": "Black flies",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20092"
+  },
+  {
+    "id": "20267",
+    "name": "Cerqueirellum argentiscutum",
+    "type": "trans",
+    "parent": "20266",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20092"
+  },
+  {
+    "id": "20281",
+    "name": "Spp. Simuliidae",
+    "type": "trans",
+    "parent": "20266",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20267"
+  },
+  {
+    "id": "20187",
+    "name": "Canids",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20266"
+  },
+  {
+    "id": "20209",
+    "name": "Dogs",
+    "type": "trans",
+    "parent": "20187",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20266"
+  },
+  {
+    "id": "20210",
+    "name": "Foxes",
+    "type": "trans",
+    "parent": "20187",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20209"
+  },
+  {
+    "id": "20160",
+    "name": "Chiggers",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20187"
+  },
+  {
+    "id": "20313",
+    "name": "Deer",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20160"
+  },
+  {
+    "id": "20311",
+    "name": "Dogs",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20313"
+  },
+  {
+    "id": "20312",
+    "name": "Domestic dogs",
+    "type": "trans",
+    "parent": "20311",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20313"
+  },
+  {
+    "id": "20104",
+    "name": "Felids",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20311"
+  },
+  {
+    "id": "20036",
+    "name": "Fleas",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20104"
+  },
+  {
+    "id": "20041",
+    "name": "Rodents",
+    "type": "trans",
+    "parent": "20036",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20104"
+  },
+  {
+    "id": "20300",
+    "name": "Xenopsylla cheopis",
+    "type": "trans",
+    "parent": "20036",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20041"
+  },
+  {
+    "id": "20293",
+    "name": "Flies",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20036"
+  },
+  {
+    "id": "20321",
+    "name": "Foxes",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20293"
+  },
+  {
+    "id": "20199",
+    "name": "Gerbils",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20321"
+  },
+  {
+    "id": "20200",
+    "name": "Rhombomys opimus",
+    "type": "trans",
+    "parent": "20199",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20321"
+  },
+  {
+    "id": "20201",
+    "name": "Fleas",
+    "type": "trans",
+    "parent": "20199",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20321"
+  },
+  {
+    "id": "20193",
+    "name": "Hare",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20199"
+  },
+  {
+    "id": "20120",
+    "name": "Insects",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20193"
+  },
+  {
+    "id": "20121",
+    "name": " Rhodnius prolixus",
+    "type": "trans",
+    "parent": "20120",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20193"
+  },
+  {
+    "id": "20324",
+    "name": "Cordylobia anthropophaga",
+    "type": "trans",
+    "parent": "20120",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20121"
+  },
+  {
+    "id": "20274",
+    "name": "Dermatobia hominis",
+    "type": "trans",
+    "parent": "20120",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20324"
+  },
+  {
+    "id": "20140",
+    "name": "Triatomine insects",
+    "type": "trans",
+    "parent": "20120",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20274"
+  },
+  {
+    "id": "20214",
+    "name": "Lice",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20120"
+  },
+  {
+    "id": "20071",
+    "name": "Livestock",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20214"
+  },
+  {
+    "id": "20224",
+    "name": "Urine contact",
+    "type": "trans",
+    "parent": "20071",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20214"
+  },
+  {
+    "id": "20168",
+    "name": "Horses",
+    "type": "trans",
+    "parent": "20071",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20224"
+  },
+  {
+    "id": "20211",
+    "name": "Pigs",
+    "type": "trans",
+    "parent": "20071",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20168"
+  },
+  {
+    "id": "20075",
+    "name": "Marmots",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20071"
+  },
+  {
+    "id": "20076",
+    "name": "Rats",
+    "type": "trans",
+    "parent": "20075",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20071"
+  },
+  {
+    "id": "20161",
+    "name": "Mice",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20075"
+  },
+  {
+    "id": "20188",
+    "name": "Deer mouse",
+    "type": "trans",
+    "parent": "20161",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20075"
+  },
+  {
+    "id": "20171",
+    "name": "Mite",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20161"
+  },
+  {
+    "id": "20172",
+    "name": "Sarcoptes scabiei var. hominis",
+    "type": "trans",
+    "parent": "20171",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20161"
+  },
+  {
+    "id": "20113",
+    "name": "Monkey",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20171"
+  },
+  {
+    "id": "20150",
+    "name": "Bat",
+    "type": "trans",
+    "parent": "20113",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20171"
+  },
+  {
+    "id": "20032",
+    "name": "Mosquito",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20113"
+  },
+  {
+    "id": "20190",
+    "name": "Birds",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20113"
+  },
+  {
+    "id": "20337",
+    "name": "Aedes mcintoshi",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20190"
+  },
+  {
+    "id": "20338",
+    "name": " Aedes ochraceus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20337"
+  },
+  {
+    "id": "20060",
+    "name": "Aedes aegypti",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20338"
+  },
+  {
+    "id": "20095",
+    "name": "Aedes albopictus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20060"
+  },
+  {
+    "id": "20191",
+    "name": "Aedes camptorhynchus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20095"
+  },
+  {
+    "id": "20206",
+    "name": "Aedes notoscriptus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20191"
+  },
+  {
+    "id": "20114",
+    "name": "Aedes spp.",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20206"
+  },
+  {
+    "id": "20212",
+    "name": "Aedes taeniorhynchus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20114"
+  },
+  {
+    "id": "20207",
+    "name": "Aedes vigilax",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20212"
+  },
+  {
+    "id": "20058",
+    "name": "Anopheles",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20207"
+  },
+  {
+    "id": "20130",
+    "name": "Anopheles arabiensis",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20058"
+  },
+  {
+    "id": "20184",
+    "name": "Anopheles culicifacies",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20130"
+  },
+  {
+    "id": "20129",
+    "name": "Anopheles funestus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20184"
+  },
+  {
+    "id": "20204",
+    "name": "Anopheles gambiae",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20129"
+  },
+  {
+    "id": "20304",
+    "name": "Anopheles punctulatus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20204"
+  },
+  {
+    "id": "20159",
+    "name": "Anopheles sundaicus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20304"
+  },
+  {
+    "id": "20179",
+    "name": "Anopheles vestipennis",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20159"
+  },
+  {
+    "id": "20057",
+    "name": "Culex",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20179"
+  },
+  {
+    "id": "20205",
+    "name": "Culex annulirostris",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20057"
+  },
+  {
+    "id": "20142",
+    "name": "Culex gelidus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20205"
+  },
+  {
+    "id": "20149",
+    "name": "Culex modestus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20142"
+  },
+  {
+    "id": "20186",
+    "name": "Culex nigripalpus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20149"
+  },
+  {
+    "id": "20079",
+    "name": "Culex pipiens",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20186"
+  },
+  {
+    "id": "20083",
+    "name": "Culex restuans",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20079"
+  },
+  {
+    "id": "20283",
+    "name": "Culex spp.",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20083"
+  },
+  {
+    "id": "20329",
+    "name": "Culex tarsalis",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20283"
+  },
+  {
+    "id": "20137",
+    "name": "Culex tritaeniorhynchus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20329"
+  },
+  {
+    "id": "20208",
+    "name": "Culex univittatus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20137"
+  },
+  {
+    "id": "20237",
+    "name": "Haemagogus janthinomys",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20208"
+  },
+  {
+    "id": "20108",
+    "name": "Haemagogus leucocelaenus",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20237"
+  },
+  {
+    "id": "20094",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20108"
+  },
+  {
+    "id": "20325",
+    "name": "Dog",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20108"
+  },
+  {
+    "id": "20216",
+    "name": "Ochlerotatus vigilax",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20094"
+  },
+  {
+    "id": "20213",
+    "name": "Psorophora confinnis",
+    "type": "trans",
+    "parent": "20032",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20216"
+  },
+  {
+    "id": "20064",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20032"
+  },
+  {
+    "id": "20098",
+    "name": "Reindeer",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20064"
+  },
+  {
+    "id": "20039",
+    "name": "Rodents",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20098"
+  },
+  {
+    "id": "20192",
+    "name": "Fleas",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20098"
+  },
+  {
+    "id": "20231",
+    "name": "Pigs",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20192"
+  },
+  {
+    "id": "20112",
+    "name": "Urine contact",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20231"
+  },
+  {
+    "id": "20132",
+    "name": "Calomys musculinus",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20112"
+  },
+  {
+    "id": "20152",
+    "name": "Deer mice (Peromyscus)",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20132"
+  },
+  {
+    "id": "20317",
+    "name": "M. limnophilus",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20152"
+  },
+  {
+    "id": "20147",
+    "name": "Mastomys natalensis",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20317"
+  },
+  {
+    "id": "20196",
+    "name": "Not Specified",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20147"
+  },
+  {
+    "id": "20158",
+    "name": "Peromyscus maniculatus",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20196"
+  },
+  {
+    "id": "20252",
+    "name": "Prairie dogs",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20158"
+  },
+  {
+    "id": "20189",
+    "name": "Rats",
+    "type": "trans",
+    "parent": "20039",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20252"
+  },
+  {
+    "id": "20334",
+    "name": "Sand Flea",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20039"
+  },
+  {
+    "id": "20118",
+    "name": "Sand flies",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20334"
+  },
+  {
+    "id": "20305",
+    "name": "Lutzomia longipalpis ",
+    "type": "trans",
+    "parent": "20118",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20334"
+  },
+  {
+    "id": "20166",
+    "name": "Lutzomyia spp",
+    "type": "trans",
+    "parent": "20118",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20305"
+  },
+  {
+    "id": "20182",
+    "name": "Not Specified",
+    "type": "trans",
+    "parent": "20118",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20166"
+  },
+  {
+    "id": "20119",
+    "name": "phlebotomine sand flies",
+    "type": "trans",
+    "parent": "20118",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20182"
+  },
+  {
+    "id": "20309",
+    "name": "Phlebotomus papatasi",
+    "type": "trans",
+    "parent": "20118",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20119"
+  },
+  {
+    "id": "20294",
+    "name": "Phlebotomus sp.",
+    "type": "trans",
+    "parent": "20118",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20309"
+  },
+  {
+    "id": "20314",
+    "name": "Seals",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20118"
+  },
+  {
+    "id": "20315",
+    "name": "Halichoerus grypus",
+    "type": "trans",
+    "parent": "20314",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20118"
+  },
+  {
+    "id": "20096",
+    "name": "Snails",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20314"
+  },
+  {
+    "id": "20320",
+    "name": "Bulinus globosus",
+    "type": "trans",
+    "parent": "20096",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20314"
+  },
+  {
+    "id": "20292",
+    "name": "Bulinus pfeifferi",
+    "type": "trans",
+    "parent": "20096",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20320"
+  },
+  {
+    "id": "20336",
+    "name": "Lymnaeidae snails",
+    "type": "trans",
+    "parent": "20096",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20292"
+  },
+  {
+    "id": "20097",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "20096",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20336"
+  },
+  {
+    "id": "20299",
+    "name": "Schistosoma spp.",
+    "type": "trans",
+    "parent": "20096",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20097"
+  },
+  {
+    "id": "20030",
+    "name": "Ticks",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20096"
+  },
+  {
+    "id": "20131",
+    "name": "Alectorobius sonrai ",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20096"
+  },
+  {
+    "id": "20316",
+    "name": "Amblyomma cajennense",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20131"
+  },
+  {
+    "id": "20251",
+    "name": "Dermacentor marginatus",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20316"
+  },
+  {
+    "id": "20301",
+    "name": "Dermacentor reticulatus",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20251"
+  },
+  {
+    "id": "20221",
+    "name": "Dermacentor variabilis",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20301"
+  },
+  {
+    "id": "20163",
+    "name": "Haemaphysalis longicornis",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20221"
+  },
+  {
+    "id": "20306",
+    "name": "Haemaphysalis spinigera",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20163"
+  },
+  {
+    "id": "20219",
+    "name": "Haemaphysalis spp.",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20306"
+  },
+  {
+    "id": "20078",
+    "name": "Hyalomma spp.",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20219"
+  },
+  {
+    "id": "20061",
+    "name": "Ixodes",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20078"
+  },
+  {
+    "id": "20280",
+    "name": "Ixodes pacificus ",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20061"
+  },
+  {
+    "id": "20303",
+    "name": "Ixodes persulcatus",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20280"
+  },
+  {
+    "id": "20085",
+    "name": "Ixodes ricinus",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20303"
+  },
+  {
+    "id": "20084",
+    "name": "Dogs",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20303"
+  },
+  {
+    "id": "20177",
+    "name": "Rodents",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20084"
+  },
+  {
+    "id": "20148",
+    "name": "Ixodes scapularis",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20085"
+  },
+  {
+    "id": "20238",
+    "name": "Ixodes spp.",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20148"
+  },
+  {
+    "id": "20151",
+    "name": "Not Specified",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20238"
+  },
+  {
+    "id": "20220",
+    "name": "Rhipicephalus sanguineus",
+    "type": "trans",
+    "parent": "20030",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20151"
+  },
+  {
+    "id": "20141",
+    "name": "Tsetse fly",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20030"
+  },
+  {
+    "id": "20164",
+    "name": "Glossina",
+    "type": "trans",
+    "parent": "20141",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20030"
+  },
+  {
+    "id": "20302",
+    "name": "Glossina pallidipes",
+    "type": "trans",
+    "parent": "20141",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20164"
+  },
+  {
+    "id": "20143",
+    "name": "Voles",
+    "type": "trans",
+    "parent": "20029",
+    "is_species": "0",
+    "general_id": 1,
+    "upper_node": "20141"
+  },
+  {
+    "id": "20144",
+    "name": "Myodes glareolu",
+    "type": "trans",
+    "parent": "20143",
+    "is_species": "1",
+    "general_id": 1,
+    "upper_node": "20141"
+  },
+  {
+    "id": "20026",
+    "name": "Contact",
+    "type": "trans",
+    "parent": "20025",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20143"
+  },
+  {
+    "id": "20049",
+    "name": "Beaver",
+    "type": "trans",
+    "parent": "20026",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20143"
+  },
+  {
+    "id": "20101",
+    "name": "Ingestion",
+    "type": "trans",
+    "parent": "20026",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20049"
+  },
+  {
+    "id": "20042",
+    "name": "Drinking water",
+    "type": "trans",
+    "parent": "20025",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20026"
+  },
+  {
+    "id": "20082",
+    "name": "Beaver",
+    "type": "trans",
+    "parent": "20042",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20026"
+  },
+  {
+    "id": "20044",
+    "name": "Contact",
+    "type": "trans",
+    "parent": "20042",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20082"
+  },
+  {
+    "id": "20194",
+    "name": "Recreational Exposure",
+    "type": "trans",
+    "parent": "20042",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20044"
+  },
+  {
+    "id": "20244",
+    "name": "Fecal-oral route",
+    "type": "trans",
+    "parent": "20025",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20042"
+  },
+  {
+    "id": "20088",
+    "name": "Household use",
+    "type": "trans",
+    "parent": "20025",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20244"
+  },
+  {
+    "id": "20215",
+    "name": "Pig",
+    "type": "trans",
+    "parent": "20088",
+    "is_species": "1",
+    "general_id": 2,
+    "upper_node": "20244"
+  },
+  {
+    "id": "20270",
+    "name": "Not- specified",
+    "type": "trans",
+    "parent": "20025",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20088"
+  },
+  {
+    "id": "20077",
+    "name": "Not-specified",
+    "type": "trans",
+    "parent": "20025",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20270"
+  },
+  {
+    "id": "20145",
+    "name": "Recreational exposure",
+    "type": "trans",
+    "parent": "20025",
+    "is_species": "0",
+    "general_id": 2,
+    "upper_node": "20077"
+  },
+  {
+    "id": "20028",
+    "name": "Contact",
+    "type": "trans",
+    "parent": "20027",
+    "is_species": "0",
+    "general_id": 3,
+    "upper_node": "20145"
+  },
+  {
+    "id": "20241",
+    "name": "Ingestion",
+    "type": "trans",
+    "parent": "20028",
+    "is_species": "0",
+    "general_id": 3,
+    "upper_node": "20145"
+  },
+  {
+    "id": "20127",
+    "name": "Manure",
+    "type": "trans",
+    "parent": "20028",
+    "is_species": "0",
+    "general_id": 3,
+    "upper_node": "20241"
+  },
+  {
+    "id": "20326",
+    "name": "Splashing manure",
+    "type": "trans",
+    "parent": "20028",
+    "is_species": "0",
+    "general_id": 3,
+    "upper_node": "20127"
+  },
+  {
+    "id": "20245",
+    "name": "Fecal-oral route",
+    "type": "trans",
+    "parent": "20027",
+    "is_species": "0",
+    "general_id": 3,
+    "upper_node": "20028"
+  },
+  {
+    "id": "20047",
+    "name": "Ingestion",
+    "type": "trans",
+    "parent": "20027",
+    "is_species": "0",
+    "general_id": 3,
+    "upper_node": "20245"
+  },
+  {
+    "id": "20086",
+    "name": "Chicken",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20245"
+  },
+  {
+    "id": "20290",
+    "name": "Fish",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20086"
+  },
+  {
+    "id": "20157",
+    "name": "Game",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20290"
+  },
+  {
+    "id": "20125",
+    "name": "Milk",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20157"
+  },
+  {
+    "id": "20269",
+    "name": "Oysters",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20125"
+  },
+  {
+    "id": "20126",
+    "name": "Pork",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20269"
+  },
+  {
+    "id": "20099",
+    "name": "Seafood",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20126"
+  },
+  {
+    "id": "20174",
+    "name": "Shellfish",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20099"
+  },
+  {
+    "id": "20217",
+    "name": "Snail - freshwater",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20174"
+  },
+  {
+    "id": "20218",
+    "name": "Fish - freshwater",
+    "type": "trans",
+    "parent": "20047",
+    "is_species": "0",
+    "general_id": 3,
+    "upper_node": "20174"
+  },
+  {
+    "id": "20065",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "20027",
+    "is_species": "0",
+    "general_id": 3,
+    "upper_node": "20047"
+  },
+  {
+    "id": "20240",
+    "name": " Aspergillus flavus",
+    "type": "trans",
+    "parent": "20065",
+    "is_species": "1",
+    "general_id": 3,
+    "upper_node": "20047"
+  },
+  {
+    "id": "20087",
+    "name": "Dust storm",
+    "type": "trans",
+    "parent": "20048",
+    "is_species": "0",
+    "general_id": 4,
+    "upper_node": "20065"
+  },
+  {
+    "id": "20062",
+    "name": "Inhalation",
+    "type": "trans",
+    "parent": "20048",
+    "is_species": "0",
+    "general_id": 4,
+    "upper_node": "20087"
+  },
+  {
+    "id": "20063",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "20048",
+    "is_species": "0",
+    "general_id": 4,
+    "upper_node": "20062"
+  },
+  {
+    "id": "20228",
+    "name": "Pollen",
+    "type": "trans",
+    "parent": "20048",
+    "is_species": "0",
+    "general_id": 4,
+    "upper_node": "20063"
+  },
+  {
+    "id": "20229",
+    "name": "Parthenium hysterophorus",
+    "type": "trans",
+    "parent": "20228",
+    "is_species": "1",
+    "general_id": 4,
+    "upper_node": "20063"
+  },
+  {
+    "id": "20246",
+    "name": "Respiratory droplets",
+    "type": "trans",
+    "parent": "20048",
+    "is_species": "0",
+    "general_id": 4,
+    "upper_node": "20228"
+  },
+  {
+    "id": "20133",
+    "name": "Rodent",
+    "type": "trans",
+    "parent": "20048",
+    "is_species": "0",
+    "general_id": 4,
+    "upper_node": "20246"
+  },
+  {
+    "id": "20134",
+    "name": "Calomys callosus ",
+    "type": "trans",
+    "parent": "20133",
+    "is_species": "1",
+    "general_id": 4,
+    "upper_node": "20246"
+  },
+  {
+    "id": "20135",
+    "name": "Mastomys natalensis",
+    "type": "trans",
+    "parent": "20133",
+    "is_species": "1",
+    "general_id": 4,
+    "upper_node": "20134"
+  },
+  {
+    "id": "20090",
+    "name": "Spores",
+    "type": "trans",
+    "parent": "20048",
+    "is_species": "0",
+    "general_id": 4,
+    "upper_node": "20133"
+  },
+  {
+    "id": "20333",
+    "name": "Animal products",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20090"
+  },
+  {
+    "id": "20232",
+    "name": "Biting",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20333"
+  },
+  {
+    "id": "20328",
+    "name": "Cats",
+    "type": "trans",
+    "parent": "20232",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20333"
+  },
+  {
+    "id": "20248",
+    "name": "Dogs",
+    "type": "trans",
+    "parent": "20232",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20328"
+  },
+  {
+    "id": "20268",
+    "name": "Rhipicephalus sanguineus",
+    "type": "trans",
+    "parent": "20232",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20248"
+  },
+  {
+    "id": "20162",
+    "name": "Blood",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20232"
+  },
+  {
+    "id": "20181",
+    "name": "Bodily Fluids",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20162"
+  },
+  {
+    "id": "20242",
+    "name": "Fecal-oral route",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20181"
+  },
+  {
+    "id": "20286",
+    "name": "Infected urine",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20242"
+  },
+  {
+    "id": "20103",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20286"
+  },
+  {
+    "id": "20289",
+    "name": "rove beetles",
+    "type": "trans",
+    "parent": "20103",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20286"
+  },
+  {
+    "id": "20319",
+    "name": "Soil",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20103"
+  },
+  {
+    "id": "20233",
+    "name": "Stings",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20319"
+  },
+  {
+    "id": "20282",
+    "name": "Portuguese man-of-war",
+    "type": "trans",
+    "parent": "20233",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20319"
+  },
+  {
+    "id": "20068",
+    "name": "Touching",
+    "type": "trans",
+    "parent": "20067",
+    "is_species": "0",
+    "general_id": 5,
+    "upper_node": "20233"
+  },
+  {
+    "id": "20285",
+    "name": "Amphibians",
+    "type": "trans",
+    "parent": "20068",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20233"
+  },
+  {
+    "id": "20227",
+    "name": "Ancylostoma caninum",
+    "type": "trans",
+    "parent": "20068",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20285"
+  },
+  {
+    "id": "20330",
+    "name": "Dead corpse",
+    "type": "trans",
+    "parent": "20068",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20227"
+  },
+  {
+    "id": "20226",
+    "name": "Paederus beetles",
+    "type": "trans",
+    "parent": "20068",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20330"
+  },
+  {
+    "id": "20230",
+    "name": "Parthenium hysterophorus",
+    "type": "trans",
+    "parent": "20068",
+    "is_species": "1",
+    "general_id": 5,
+    "upper_node": "20226"
+  },
+  {
+    "id": "30962",
+    "name": "Gastrointestinal infections",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": -1
+  },
+  {
+    "id": "30162",
+    "name": "Acute febrile illness",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30962"
+  },
+  {
+    "id": "30657",
+    "name": "Acute respiratory tract infections",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30162"
+  },
+  {
+    "id": "30632",
+    "name": "Al Eskan Disease",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30657"
+  },
+  {
+    "id": "30545",
+    "name": "Asthma",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30632"
+  },
+  {
+    "id": "30612",
+    "name": "Cardiovascular disease",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30545"
+  },
+  {
+    "id": "30180",
+    "name": "Conjunctivitis",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30612"
+  },
+  {
+    "id": "30298",
+    "name": "Dermatitis",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30180"
+  },
+  {
+    "id": "30065",
+    "name": "Diarrhea",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30298"
+  },
+  {
+    "id": "30608",
+    "name": "Encephalitis ",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30065"
+  },
+  {
+    "id": "30187",
+    "name": "Eye infections",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30608"
+  },
+  {
+    "id": "30177",
+    "name": "Gastroenteritis",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30187"
+  },
+  {
+    "id": "30759",
+    "name": "Infectious diarrhea",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30177"
+  },
+  {
+    "id": "30758",
+    "name": "Intestinal infectious diseases",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30759"
+  },
+  {
+    "id": "30501",
+    "name": "Kawasaki Disease",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30758"
+  },
+  {
+    "id": "30974",
+    "name": "Candida",
+    "type": "trans",
+    "parent": "30501",
+    "general_id": 0,
+    "upper_node": "30758"
+  },
+  {
+    "id": "30557",
+    "name": "Pneumonia",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30501"
+  },
+  {
+    "id": "30060",
+    "name": "Respiratory disease",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30557"
+  },
+  {
+    "id": "30061",
+    "name": "Skin disease",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30060"
+  },
+  {
+    "id": "30762",
+    "name": "Tonsillitis",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30061"
+  },
+  {
+    "id": "30127",
+    "name": "Unspecified",
+    "type": "trans",
+    "parent": "30058",
+    "general_id": 0,
+    "upper_node": "30762"
+  },
+  {
+    "id": "30970",
+    "name": "Pertussis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30127"
+  },
+  {
+    "id": "30971",
+    "name": "Bordetella pertussis",
+    "type": "trans",
+    "parent": "30970",
+    "general_id": 2,
+    "upper_node": "30127"
+  },
+  {
+    "id": "30978",
+    "name": "Cutaneous ulcers ",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30970"
+  },
+  {
+    "id": "30980",
+    "name": "Pneumonia",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30978"
+  },
+  {
+    "id": "30847",
+    "name": "Anaplasmosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30980"
+  },
+  {
+    "id": "30879",
+    "name": "A. phagocytophilum",
+    "type": "trans",
+    "parent": "30847",
+    "general_id": 2,
+    "upper_node": "30980"
+  },
+  {
+    "id": "30089",
+    "name": "Anthrax",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30847"
+  },
+  {
+    "id": "30090",
+    "name": "Bacillus anthracis",
+    "type": "trans",
+    "parent": "30089",
+    "general_id": 2,
+    "upper_node": "30847"
+  },
+  {
+    "id": "30490",
+    "name": "Bacillus cereus food poisoning",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30089"
+  },
+  {
+    "id": "30491",
+    "name": "B. cereus",
+    "type": "trans",
+    "parent": "30490",
+    "general_id": 2,
+    "upper_node": "30089"
+  },
+  {
+    "id": "30804",
+    "name": "Borrelia miyamotoi Disease",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30490"
+  },
+  {
+    "id": "30805",
+    "name": "Borrelia miyamotoi",
+    "type": "trans",
+    "parent": "30804",
+    "general_id": 2,
+    "upper_node": "30490"
+  },
+  {
+    "id": "30099",
+    "name": "Botulism",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30804"
+  },
+  {
+    "id": "30100",
+    "name": "Clostridium botulinum",
+    "type": "trans",
+    "parent": "30099",
+    "general_id": 2,
+    "upper_node": "30804"
+  },
+  {
+    "id": "30827",
+    "name": "Brazilian Spotted Fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30099"
+  },
+  {
+    "id": "30828",
+    "name": "Rickettsia rickettsii",
+    "type": "trans",
+    "parent": "30827",
+    "general_id": 2,
+    "upper_node": "30099"
+  },
+  {
+    "id": "30934",
+    "name": "Brucellosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30827"
+  },
+  {
+    "id": "30935",
+    "name": "Brucella spp.",
+    "type": "trans",
+    "parent": "30934",
+    "general_id": 2,
+    "upper_node": "30827"
+  },
+  {
+    "id": "30323",
+    "name": "Buruli ulcer",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30934"
+  },
+  {
+    "id": "30324",
+    "name": "Mycobacterium ulcerans",
+    "type": "trans",
+    "parent": "30323",
+    "general_id": 2,
+    "upper_node": "30934"
+  },
+  {
+    "id": "30076",
+    "name": "Campylobacteriosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30323"
+  },
+  {
+    "id": "30077",
+    "name": "Campylobacter",
+    "type": "trans",
+    "parent": "30076",
+    "general_id": 2,
+    "upper_node": "30323"
+  },
+  {
+    "id": "30471",
+    "name": "Campylobacter jejuni",
+    "type": "trans",
+    "parent": "30076",
+    "general_id": 2,
+    "upper_node": "30077"
+  },
+  {
+    "id": "30216",
+    "name": "Cellulitis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30076"
+  },
+  {
+    "id": "30217",
+    "name": "Staphylococcus aureus",
+    "type": "trans",
+    "parent": "30216",
+    "general_id": 2,
+    "upper_node": "30076"
+  },
+  {
+    "id": "30218",
+    "name": "Streptococcus pyogenes",
+    "type": "trans",
+    "parent": "30216",
+    "general_id": 2,
+    "upper_node": "30217"
+  },
+  {
+    "id": "30881",
+    "name": "Chlamydia",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30216"
+  },
+  {
+    "id": "30066",
+    "name": "Cholera",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30881"
+  },
+  {
+    "id": "30067",
+    "name": "Vibrio cholerae",
+    "type": "trans",
+    "parent": "30066",
+    "general_id": 2,
+    "upper_node": "30881"
+  },
+  {
+    "id": "30492",
+    "name": "Clostridial food poisoning",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30066"
+  },
+  {
+    "id": "30493",
+    "name": "C. perfringens",
+    "type": "trans",
+    "parent": "30492",
+    "general_id": 2,
+    "upper_node": "30066"
+  },
+  {
+    "id": "30633",
+    "name": "Desert Lung Syndrome",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30492"
+  },
+  {
+    "id": "30020",
+    "name": "Diarrhea",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30633"
+  },
+  {
+    "id": "30754",
+    "name": "Aeromonas sp.",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30633"
+  },
+  {
+    "id": "30420",
+    "name": "Clostridium difficile",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30754"
+  },
+  {
+    "id": "30091",
+    "name": "Clostridium perfringens",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30420"
+  },
+  {
+    "id": "30021",
+    "name": "Escherichia coli",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30091"
+  },
+  {
+    "id": "30282",
+    "name": "Escherichia coli 0157:H7",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30021"
+  },
+  {
+    "id": "30280",
+    "name": "Not Specified",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30282"
+  },
+  {
+    "id": "30052",
+    "name": "Shigella",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30280"
+  },
+  {
+    "id": "30882",
+    "name": "Staphylococcus aureus",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30052"
+  },
+  {
+    "id": "30049",
+    "name": "Vibrio cholerae",
+    "type": "trans",
+    "parent": "30020",
+    "general_id": 2,
+    "upper_node": "30882"
+  },
+  {
+    "id": "30525",
+    "name": "Dysbiosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30020"
+  },
+  {
+    "id": "30526",
+    "name": "Plesiomonas",
+    "type": "trans",
+    "parent": "30525",
+    "general_id": 2,
+    "upper_node": "30020"
+  },
+  {
+    "id": "30527",
+    "name": "Trabulsiella",
+    "type": "trans",
+    "parent": "30525",
+    "general_id": 2,
+    "upper_node": "30526"
+  },
+  {
+    "id": "30349",
+    "name": "Dysentery",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30525"
+  },
+  {
+    "id": "30760",
+    "name": "bacillary dysentery",
+    "type": "trans",
+    "parent": "30349",
+    "general_id": 2,
+    "upper_node": "30525"
+  },
+  {
+    "id": "30350",
+    "name": "Shigella",
+    "type": "trans",
+    "parent": "30349",
+    "general_id": 2,
+    "upper_node": "30760"
+  },
+  {
+    "id": "30671",
+    "name": "Ehrlichiosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30349"
+  },
+  {
+    "id": "30829",
+    "name": "Ehrlichia chaffeensis",
+    "type": "trans",
+    "parent": "30671",
+    "general_id": 2,
+    "upper_node": "30349"
+  },
+  {
+    "id": "30672",
+    "name": "Ehrlichia spp",
+    "type": "trans",
+    "parent": "30671",
+    "general_id": 2,
+    "upper_node": "30829"
+  },
+  {
+    "id": "30226",
+    "name": "Escherichia coli",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30671"
+  },
+  {
+    "id": "30227",
+    "name": "Escherichia coli",
+    "type": "trans",
+    "parent": "30226",
+    "general_id": 2,
+    "upper_node": "30671"
+  },
+  {
+    "id": "30472",
+    "name": "Escherichia coli O157:h7 ",
+    "type": "trans",
+    "parent": "30226",
+    "general_id": 2,
+    "upper_node": "30227"
+  },
+  {
+    "id": "30848",
+    "name": "Flinders Island Spotted Fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30226"
+  },
+  {
+    "id": "30849",
+    "name": "Rickettsia honei",
+    "type": "trans",
+    "parent": "30848",
+    "general_id": 2,
+    "upper_node": "30226"
+  },
+  {
+    "id": "30094",
+    "name": "Gastroenteritis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30848"
+  },
+  {
+    "id": "30176",
+    "name": "Not Specified",
+    "type": "trans",
+    "parent": "30094",
+    "general_id": 2,
+    "upper_node": "30848"
+  },
+  {
+    "id": "30524",
+    "name": "Plesiomonas",
+    "type": "trans",
+    "parent": "30094",
+    "general_id": 2,
+    "upper_node": "30176"
+  },
+  {
+    "id": "30095",
+    "name": "Vibrio parahaemolyticus",
+    "type": "trans",
+    "parent": "30094",
+    "general_id": 2,
+    "upper_node": "30524"
+  },
+  {
+    "id": "30703",
+    "name": "Gonorrhea",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30094"
+  },
+  {
+    "id": "30461",
+    "name": "Hemolytic uremic syndrome",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30703"
+  },
+  {
+    "id": "30179",
+    "name": "Impetigo",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30461"
+  },
+  {
+    "id": "30252",
+    "name": "Keratitis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30179"
+  },
+  {
+    "id": "30253",
+    "name": "Gram-positive cocci",
+    "type": "trans",
+    "parent": "30252",
+    "general_id": 2,
+    "upper_node": "30179"
+  },
+  {
+    "id": "30254",
+    "name": "Pseudomonas",
+    "type": "trans",
+    "parent": "30252",
+    "general_id": 2,
+    "upper_node": "30253"
+  },
+  {
+    "id": "30119",
+    "name": "Legionellosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30252"
+  },
+  {
+    "id": "30715",
+    "name": "Legionella pneumophila",
+    "type": "trans",
+    "parent": "30119",
+    "general_id": 2,
+    "upper_node": "30252"
+  },
+  {
+    "id": "30120",
+    "name": "Legionella sp.",
+    "type": "trans",
+    "parent": "30119",
+    "general_id": 2,
+    "upper_node": "30715"
+  },
+  {
+    "id": "30726",
+    "name": "Leprosy",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30119"
+  },
+  {
+    "id": "30727",
+    "name": "Mycobacterium spp.",
+    "type": "trans",
+    "parent": "30726",
+    "general_id": 2,
+    "upper_node": "30119"
+  },
+  {
+    "id": "30037",
+    "name": "Leptospirosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30726"
+  },
+  {
+    "id": "30038",
+    "name": "Leptospira",
+    "type": "trans",
+    "parent": "30037",
+    "general_id": 2,
+    "upper_node": "30726"
+  },
+  {
+    "id": "30774",
+    "name": "Leptospira interrogans",
+    "type": "trans",
+    "parent": "30037",
+    "general_id": 2,
+    "upper_node": "30038"
+  },
+  {
+    "id": "30274",
+    "name": "Listeriosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30037"
+  },
+  {
+    "id": "30275",
+    "name": "Listeria monocytogenes",
+    "type": "trans",
+    "parent": "30274",
+    "general_id": 2,
+    "upper_node": "30037"
+  },
+  {
+    "id": "30029",
+    "name": "Lyme disease",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30274"
+  },
+  {
+    "id": "30030",
+    "name": "Borrelia bacterium",
+    "type": "trans",
+    "parent": "30029",
+    "general_id": 2,
+    "upper_node": "30274"
+  },
+  {
+    "id": "30966",
+    "name": "Borrelia spp.",
+    "type": "trans",
+    "parent": "30029",
+    "general_id": 2,
+    "upper_node": "30030"
+  },
+  {
+    "id": "30375",
+    "name": "Borrelia burgdorferi",
+    "type": "trans",
+    "parent": "30029",
+    "general_id": 2,
+    "upper_node": "30966"
+  },
+  {
+    "id": "30605",
+    "name": "Mediterranean spotted fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30029"
+  },
+  {
+    "id": "30606",
+    "name": "Rickettsia conorii conorii",
+    "type": "trans",
+    "parent": "30605",
+    "general_id": 2,
+    "upper_node": "30029"
+  },
+  {
+    "id": "30146",
+    "name": "Meningitis / Meningococcus",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30605"
+  },
+  {
+    "id": "30147",
+    "name": "Neisseria meningitidis",
+    "type": "trans",
+    "parent": "30146",
+    "general_id": 2,
+    "upper_node": "30605"
+  },
+  {
+    "id": "30474",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "30146",
+    "general_id": 2,
+    "upper_node": "30147"
+  },
+  {
+    "id": "30334",
+    "name": "Methicillin-resistant Staphylococcus aureus (MRSA)",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30146"
+  },
+  {
+    "id": "30568",
+    "name": "Mycoplasma pneumonia",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30334"
+  },
+  {
+    "id": "30569",
+    "name": "Mycoplasma pneumoniae",
+    "type": "trans",
+    "parent": "30568",
+    "general_id": 2,
+    "upper_node": "30334"
+  },
+  {
+    "id": "30417",
+    "name": "Necrotizing soft tissue infection",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30568"
+  },
+  {
+    "id": "30975",
+    "name": "Aeromonas spp.",
+    "type": "trans",
+    "parent": "30417",
+    "general_id": 2,
+    "upper_node": "30568"
+  },
+  {
+    "id": "30418",
+    "name": "Streptococcus pyogenes",
+    "type": "trans",
+    "parent": "30417",
+    "general_id": 2,
+    "upper_node": "30975"
+  },
+  {
+    "id": "30419",
+    "name": "Vibrio vulnificus",
+    "type": "trans",
+    "parent": "30417",
+    "general_id": 2,
+    "upper_node": "30418"
+  },
+  {
+    "id": "30910",
+    "name": "Neoehrlichia mikurensis infection",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30417"
+  },
+  {
+    "id": "30911",
+    "name": "Neoehrlichia mikurensis",
+    "type": "trans",
+    "parent": "30910",
+    "general_id": 2,
+    "upper_node": "30417"
+  },
+  {
+    "id": "30248",
+    "name": "Noma",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30910"
+  },
+  {
+    "id": "30249",
+    "name": "Kocuria sp.",
+    "type": "trans",
+    "parent": "30248",
+    "general_id": 2,
+    "upper_node": "30910"
+  },
+  {
+    "id": "30250",
+    "name": "Microbacterium arborescens",
+    "type": "trans",
+    "parent": "30248",
+    "general_id": 2,
+    "upper_node": "30249"
+  },
+  {
+    "id": "30314",
+    "name": "Osteomyelitis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30248"
+  },
+  {
+    "id": "30315",
+    "name": "Aeromonas",
+    "type": "trans",
+    "parent": "30314",
+    "general_id": 2,
+    "upper_node": "30248"
+  },
+  {
+    "id": "30071",
+    "name": "Para Typhoid Fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30314"
+  },
+  {
+    "id": "30072",
+    "name": "Salmonella sp.",
+    "type": "trans",
+    "parent": "30071",
+    "general_id": 2,
+    "upper_node": "30314"
+  },
+  {
+    "id": "30627",
+    "name": "Pertussis (Whooping Cough)",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30071"
+  },
+  {
+    "id": "30628",
+    "name": "Bordetella pertussis",
+    "type": "trans",
+    "parent": "30627",
+    "general_id": 2,
+    "upper_node": "30071"
+  },
+  {
+    "id": "30047",
+    "name": "Plague",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30627"
+  },
+  {
+    "id": "30048",
+    "name": "Yersinia pestis",
+    "type": "trans",
+    "parent": "30047",
+    "general_id": 2,
+    "upper_node": "30627"
+  },
+  {
+    "id": "30432",
+    "name": "Pneumococcal disease",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30047"
+  },
+  {
+    "id": "30434",
+    "name": "Streptococcus pneumoniae",
+    "type": "trans",
+    "parent": "30432",
+    "general_id": 2,
+    "upper_node": "30047"
+  },
+  {
+    "id": "30765",
+    "name": "Pneumonic plague",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30432"
+  },
+  {
+    "id": "30636",
+    "name": "Pyomyositis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30765"
+  },
+  {
+    "id": "30637",
+    "name": "Staphylococcus aureus",
+    "type": "trans",
+    "parent": "30636",
+    "general_id": 2,
+    "upper_node": "30765"
+  },
+  {
+    "id": "30547",
+    "name": "Q Fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30636"
+  },
+  {
+    "id": "30548",
+    "name": "Coxiella burnetii",
+    "type": "trans",
+    "parent": "30547",
+    "general_id": 2,
+    "upper_node": "30636"
+  },
+  {
+    "id": "30850",
+    "name": "Queensland Tick Typhus",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30547"
+  },
+  {
+    "id": "30468",
+    "name": "Relapsing fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30850"
+  },
+  {
+    "id": "30469",
+    "name": "Borrelia miyamotoi",
+    "type": "trans",
+    "parent": "30468",
+    "general_id": 2,
+    "upper_node": "30850"
+  },
+  {
+    "id": "30837",
+    "name": "Rheumatic fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30468"
+  },
+  {
+    "id": "30109",
+    "name": "Rickettsial diseases",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30837"
+  },
+  {
+    "id": "30811",
+    "name": "Anaplasma marginale",
+    "type": "trans",
+    "parent": "30109",
+    "general_id": 2,
+    "upper_node": "30837"
+  },
+  {
+    "id": "30110",
+    "name": "Rickettsia",
+    "type": "trans",
+    "parent": "30109",
+    "general_id": 2,
+    "upper_node": "30811"
+  },
+  {
+    "id": "30567",
+    "name": "Rickettsia africae",
+    "type": "trans",
+    "parent": "30109",
+    "general_id": 2,
+    "upper_node": "30110"
+  },
+  {
+    "id": "30801",
+    "name": "Rickettsia Helvetica",
+    "type": "trans",
+    "parent": "30109",
+    "general_id": 2,
+    "upper_node": "30567"
+  },
+  {
+    "id": "30810",
+    "name": "Rickettsia raoultii",
+    "type": "trans",
+    "parent": "30109",
+    "general_id": 2,
+    "upper_node": "30801"
+  },
+  {
+    "id": "30809",
+    "name": "Rickettsia slovaca",
+    "type": "trans",
+    "parent": "30109",
+    "general_id": 2,
+    "upper_node": "30810"
+  },
+  {
+    "id": "30673",
+    "name": "Rocky Mountain spotted fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30109"
+  },
+  {
+    "id": "30674",
+    "name": "Rickettsia rickettsii ",
+    "type": "trans",
+    "parent": "30673",
+    "general_id": 2,
+    "upper_node": "30109"
+  },
+  {
+    "id": "30092",
+    "name": "Salmonellosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30673"
+  },
+  {
+    "id": "30093",
+    "name": "Salmonella",
+    "type": "trans",
+    "parent": "30092",
+    "general_id": 2,
+    "upper_node": "30673"
+  },
+  {
+    "id": "30470",
+    "name": "Salmonella enteritidis",
+    "type": "trans",
+    "parent": "30092",
+    "general_id": 2,
+    "upper_node": "30093"
+  },
+  {
+    "id": "30556",
+    "name": "Scarlet fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30092"
+  },
+  {
+    "id": "30358",
+    "name": "Septicemia",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30556"
+  },
+  {
+    "id": "30904",
+    "name": "Vibrio",
+    "type": "trans",
+    "parent": "30358",
+    "general_id": 2,
+    "upper_node": "30556"
+  },
+  {
+    "id": "30068",
+    "name": "Shigellosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30358"
+  },
+  {
+    "id": "30178",
+    "name": "Shigella",
+    "type": "trans",
+    "parent": "30068",
+    "general_id": 2,
+    "upper_node": "30358"
+  },
+  {
+    "id": "30124",
+    "name": "Skin disease",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30068"
+  },
+  {
+    "id": "30219",
+    "name": "Aeromonas",
+    "type": "trans",
+    "parent": "30124",
+    "general_id": 2,
+    "upper_node": "30068"
+  },
+  {
+    "id": "30494",
+    "name": "Bartonella quintana",
+    "type": "trans",
+    "parent": "30124",
+    "general_id": 2,
+    "upper_node": "30219"
+  },
+  {
+    "id": "30125",
+    "name": "Vibrio parahemolyticus",
+    "type": "trans",
+    "parent": "30124",
+    "general_id": 2,
+    "upper_node": "30494"
+  },
+  {
+    "id": "30220",
+    "name": "Soft-tissue infection",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30124"
+  },
+  {
+    "id": "30309",
+    "name": "Aeromonas",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30124"
+  },
+  {
+    "id": "30972",
+    "name": "Vibrio sp.",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30309"
+  },
+  {
+    "id": "30773",
+    "name": "B. pseudomallei",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30972"
+  },
+  {
+    "id": "30223",
+    "name": "Chromobacterium violaceum",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30773"
+  },
+  {
+    "id": "30317",
+    "name": "Escherichia coli",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30223"
+  },
+  {
+    "id": "30316",
+    "name": "Klebsiella",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30317"
+  },
+  {
+    "id": "30416",
+    "name": "Klebsiella pneumoniae",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30316"
+  },
+  {
+    "id": "30222",
+    "name": "Leclercia adecarboxylata",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30416"
+  },
+  {
+    "id": "30768",
+    "name": "M. abscessus",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30222"
+  },
+  {
+    "id": "30769",
+    "name": "M. fortuitum",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30768"
+  },
+  {
+    "id": "30770",
+    "name": "M. peregrinum",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30769"
+  },
+  {
+    "id": "30319",
+    "name": "Proteus",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30770"
+  },
+  {
+    "id": "30318",
+    "name": "Pseudomonas aeruginosa",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30319"
+  },
+  {
+    "id": "30221",
+    "name": "Shewanella spp.",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30318"
+  },
+  {
+    "id": "30320",
+    "name": "Staphylococcus sp.",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30221"
+  },
+  {
+    "id": "30766",
+    "name": "Streptococcus spp.",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30320"
+  },
+  {
+    "id": "30322",
+    "name": "Vibrio parahaemolyticus",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30766"
+  },
+  {
+    "id": "30321",
+    "name": "Vibrio vulnificus",
+    "type": "trans",
+    "parent": "30220",
+    "general_id": 2,
+    "upper_node": "30322"
+  },
+  {
+    "id": "30690",
+    "name": "Spotted Fever Group Rickettsioses (SFGR)",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30220"
+  },
+  {
+    "id": "30643",
+    "name": "Streptococcus pneumoniae",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30690"
+  },
+  {
+    "id": "30214",
+    "name": "Tetanus",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30643"
+  },
+  {
+    "id": "30215",
+    "name": "Clostridium tetani",
+    "type": "trans",
+    "parent": "30214",
+    "general_id": 2,
+    "upper_node": "30643"
+  },
+  {
+    "id": "30292",
+    "name": "Trachoma",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30214"
+  },
+  {
+    "id": "30293",
+    "name": "Chlamydia trachomatis",
+    "type": "trans",
+    "parent": "30292",
+    "general_id": 2,
+    "upper_node": "30214"
+  },
+  {
+    "id": "30737",
+    "name": "Tsunami lung",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30292"
+  },
+  {
+    "id": "30372",
+    "name": "Tsutsugamushi disease/Scrub Typhus",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30737"
+  },
+  {
+    "id": "30373",
+    "name": "Orientia tsutsugamushi",
+    "type": "trans",
+    "parent": "30372",
+    "general_id": 2,
+    "upper_node": "30737"
+  },
+  {
+    "id": "30381",
+    "name": "Tuberculosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30372"
+  },
+  {
+    "id": "30467",
+    "name": "Mycobacterium tuberculosis",
+    "type": "trans",
+    "parent": "30381",
+    "general_id": 2,
+    "upper_node": "30372"
+  },
+  {
+    "id": "30036",
+    "name": "Tularemia",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30381"
+  },
+  {
+    "id": "30443",
+    "name": "Francisella tularensis",
+    "type": "trans",
+    "parent": "30036",
+    "general_id": 2,
+    "upper_node": "30381"
+  },
+  {
+    "id": "30069",
+    "name": "Typhoid Fever",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30036"
+  },
+  {
+    "id": "30070",
+    "name": "Salmonella typhi",
+    "type": "trans",
+    "parent": "30069",
+    "general_id": 2,
+    "upper_node": "30036"
+  },
+  {
+    "id": "30686",
+    "name": "Typhus",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30069"
+  },
+  {
+    "id": "30165",
+    "name": "Unspecified",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30686"
+  },
+  {
+    "id": "30912",
+    "name": "Staphylococcus aureus",
+    "type": "trans",
+    "parent": "30165",
+    "general_id": 2,
+    "upper_node": "30686"
+  },
+  {
+    "id": "30166",
+    "name": "Vibrio sp.",
+    "type": "trans",
+    "parent": "30165",
+    "general_id": 2,
+    "upper_node": "30912"
+  },
+  {
+    "id": "30168",
+    "name": "Vibrio vulnificus",
+    "type": "trans",
+    "parent": "30165",
+    "general_id": 2,
+    "upper_node": "30166"
+  },
+  {
+    "id": "30159",
+    "name": "Vibriosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30165"
+  },
+  {
+    "id": "30702",
+    "name": "vibrio alginolyticus",
+    "type": "trans",
+    "parent": "30159",
+    "general_id": 2,
+    "upper_node": "30165"
+  },
+  {
+    "id": "30286",
+    "name": "Vibrio parahaemolyticus",
+    "type": "trans",
+    "parent": "30159",
+    "general_id": 2,
+    "upper_node": "30702"
+  },
+  {
+    "id": "30160",
+    "name": "Vibrio sp.",
+    "type": "trans",
+    "parent": "30159",
+    "general_id": 2,
+    "upper_node": "30286"
+  },
+  {
+    "id": "30285",
+    "name": "Vibrio vulnificus",
+    "type": "trans",
+    "parent": "30159",
+    "general_id": 2,
+    "upper_node": "30160"
+  },
+  {
+    "id": "30224",
+    "name": "Whitmore's Disease / Meliodosis",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30159"
+  },
+  {
+    "id": "30225",
+    "name": "Burkholderia pseudomallei",
+    "type": "trans",
+    "parent": "30224",
+    "general_id": 2,
+    "upper_node": "30159"
+  },
+  {
+    "id": "30558",
+    "name": "Yaws",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30224"
+  },
+  {
+    "id": "30559",
+    "name": "Treponema pallidum pertenue",
+    "type": "trans",
+    "parent": "30558",
+    "general_id": 2,
+    "upper_node": "30224"
+  },
+  {
+    "id": "30748",
+    "name": "Yersiniosis ",
+    "type": "trans",
+    "parent": "30019",
+    "general_id": 2,
+    "upper_node": "30558"
+  },
+  {
+    "id": "30967",
+    "name": "Yersinia enterocolitica",
+    "type": "trans",
+    "parent": "30748",
+    "general_id": 2,
+    "upper_node": "30558"
+  },
+  {
+    "id": "30305",
+    "name": "Adenovirus Infection",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30748"
+  },
+  {
+    "id": "30306",
+    "name": "Adenovirus",
+    "type": "trans",
+    "parent": "30305",
+    "general_id": 3,
+    "upper_node": "30748"
+  },
+  {
+    "id": "30982",
+    "name": "Boutonneuse Fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30305"
+  },
+  {
+    "id": "30193",
+    "name": "Arboviral disease ",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30982"
+  },
+  {
+    "id": "30240",
+    "name": "Argentine hemorrhagic fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30193"
+  },
+  {
+    "id": "30241",
+    "name": "Junin virus",
+    "type": "trans",
+    "parent": "30240",
+    "general_id": 3,
+    "upper_node": "30193"
+  },
+  {
+    "id": "30705",
+    "name": "Aseptic meningitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30240"
+  },
+  {
+    "id": "30706",
+    "name": "Enteroviruses",
+    "type": "trans",
+    "parent": "30705",
+    "general_id": 3,
+    "upper_node": "30240"
+  },
+  {
+    "id": "30851",
+    "name": "Australian Bat Lyssavirus",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30705"
+  },
+  {
+    "id": "30415",
+    "name": "Avian bird flu",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30851"
+  },
+  {
+    "id": "30497",
+    "name": "Barmah Forest Disase",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30415"
+  },
+  {
+    "id": "30498",
+    "name": "Barmah Forest virus",
+    "type": "trans",
+    "parent": "30497",
+    "general_id": 3,
+    "upper_node": "30415"
+  },
+  {
+    "id": "30555",
+    "name": "Togaviridae",
+    "type": "trans",
+    "parent": "30497",
+    "general_id": 3,
+    "upper_node": "30498"
+  },
+  {
+    "id": "30242",
+    "name": "Bolivian hemorrhagic fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30497"
+  },
+  {
+    "id": "30189",
+    "name": "Chikungunya",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30242"
+  },
+  {
+    "id": "30230",
+    "name": "Chikungunya virus",
+    "type": "trans",
+    "parent": "30189",
+    "general_id": 3,
+    "upper_node": "30242"
+  },
+  {
+    "id": "30126",
+    "name": "Cocoliztli",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30189"
+  },
+  {
+    "id": "30609",
+    "name": "Common Cold",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30126"
+  },
+  {
+    "id": "30749",
+    "name": "COVID-19",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30609"
+  },
+  {
+    "id": "30750",
+    "name": "SARS-CoV-2",
+    "type": "trans",
+    "parent": "30749",
+    "general_id": 3,
+    "upper_node": "30609"
+  },
+  {
+    "id": "30299",
+    "name": "Crimean-Congo Hemorrhagic Fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30749"
+  },
+  {
+    "id": "30300",
+    "name": "Bunyaviridae",
+    "type": "trans",
+    "parent": "30299",
+    "general_id": 3,
+    "upper_node": "30749"
+  },
+  {
+    "id": "30027",
+    "name": "Dengue",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30299"
+  },
+  {
+    "id": "30028",
+    "name": "Dengue virus",
+    "type": "trans",
+    "parent": "30027",
+    "general_id": 3,
+    "upper_node": "30299"
+  },
+  {
+    "id": "30917",
+    "name": "Diarrhoeal disease",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30027"
+  },
+  {
+    "id": "30918",
+    "name": "Rotavirus",
+    "type": "trans",
+    "parent": "30917",
+    "general_id": 3,
+    "upper_node": "30027"
+  },
+  {
+    "id": "30206",
+    "name": "Eastern Equine Encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30917"
+  },
+  {
+    "id": "30207",
+    "name": "Togavirus",
+    "type": "trans",
+    "parent": "30206",
+    "general_id": 3,
+    "upper_node": "30917"
+  },
+  {
+    "id": "30197",
+    "name": "Ebola",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30206"
+  },
+  {
+    "id": "30278",
+    "name": "Ebola virus",
+    "type": "trans",
+    "parent": "30197",
+    "general_id": 3,
+    "upper_node": "30206"
+  },
+  {
+    "id": "30676",
+    "name": "Encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30197"
+  },
+  {
+    "id": "30677",
+    "name": "Encephalitis Flavivirus",
+    "type": "trans",
+    "parent": "30676",
+    "general_id": 3,
+    "upper_node": "30197"
+  },
+  {
+    "id": "30973",
+    "name": "Powassan virus",
+    "type": "trans",
+    "parent": "30676",
+    "general_id": 3,
+    "upper_node": "30677"
+  },
+  {
+    "id": "30385",
+    "name": "Enterovirus 71 encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30676"
+  },
+  {
+    "id": "30386",
+    "name": "Enterovirus 71",
+    "type": "trans",
+    "parent": "30385",
+    "general_id": 3,
+    "upper_node": "30676"
+  },
+  {
+    "id": "30371",
+    "name": "Enterovirus Infection",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30385"
+  },
+  {
+    "id": "30228",
+    "name": "Gastroenteritis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30371"
+  },
+  {
+    "id": "30229",
+    "name": "Norovirus",
+    "type": "trans",
+    "parent": "30228",
+    "general_id": 3,
+    "upper_node": "30371"
+  },
+  {
+    "id": "30919",
+    "name": "Sapovirus",
+    "type": "trans",
+    "parent": "30228",
+    "general_id": 3,
+    "upper_node": "30229"
+  },
+  {
+    "id": "30543",
+    "name": "Guillain-Barre syndrome",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30228"
+  },
+  {
+    "id": "30544",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30543",
+    "general_id": 3,
+    "upper_node": "30228"
+  },
+  {
+    "id": "30148",
+    "name": "Hand foot and mouth disease",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30543"
+  },
+  {
+    "id": "30365",
+    "name": "Enteroviruses",
+    "type": "trans",
+    "parent": "30148",
+    "general_id": 3,
+    "upper_node": "30543"
+  },
+  {
+    "id": "30045",
+    "name": "Hantavirus diseases",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30148"
+  },
+  {
+    "id": "30046",
+    "name": "Hantavirus",
+    "type": "trans",
+    "parent": "30045",
+    "general_id": 3,
+    "upper_node": "30148"
+  },
+  {
+    "id": "30675",
+    "name": "Sin Nombre virus",
+    "type": "trans",
+    "parent": "30045",
+    "general_id": 3,
+    "upper_node": "30046"
+  },
+  {
+    "id": "30362",
+    "name": "Hantavirus Pulmonary Syndrome",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30045"
+  },
+  {
+    "id": "30363",
+    "name": "Hantavirus",
+    "type": "trans",
+    "parent": "30362",
+    "general_id": 3,
+    "upper_node": "30045"
+  },
+  {
+    "id": "30383",
+    "name": "Sin Nombre hantavirus",
+    "type": "trans",
+    "parent": "30362",
+    "general_id": 3,
+    "upper_node": "30363"
+  },
+  {
+    "id": "30194",
+    "name": "Hemorrhagic Fever with Renal Syndrome",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30362"
+  },
+  {
+    "id": "30195",
+    "name": "Hantaviruses ",
+    "type": "trans",
+    "parent": "30194",
+    "general_id": 3,
+    "upper_node": "30362"
+  },
+  {
+    "id": "30239",
+    "name": "Hendra virus",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30194"
+  },
+  {
+    "id": "30390",
+    "name": "Paramyxoviridae",
+    "type": "trans",
+    "parent": "30239",
+    "general_id": 3,
+    "upper_node": "30194"
+  },
+  {
+    "id": "30376",
+    "name": "Henipavirus Infection",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30239"
+  },
+  {
+    "id": "30054",
+    "name": "Hepatitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30376"
+  },
+  {
+    "id": "30301",
+    "name": "Hepatitis A",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30054"
+  },
+  {
+    "id": "30302",
+    "name": "Hepatitis A virus",
+    "type": "trans",
+    "parent": "30301",
+    "general_id": 3,
+    "upper_node": "30054"
+  },
+  {
+    "id": "30303",
+    "name": "Hepatitis E",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30301"
+  },
+  {
+    "id": "30304",
+    "name": "Hepatitis E virus",
+    "type": "trans",
+    "parent": "30303",
+    "general_id": 3,
+    "upper_node": "30301"
+  },
+  {
+    "id": "30402",
+    "name": "HIV",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30303"
+  },
+  {
+    "id": "30403",
+    "name": "Lentivirus",
+    "type": "trans",
+    "parent": "30402",
+    "general_id": 3,
+    "upper_node": "30303"
+  },
+  {
+    "id": "30629",
+    "name": "Infectious mononucleosis (mono)",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30402"
+  },
+  {
+    "id": "30263",
+    "name": "Influenza",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30629"
+  },
+  {
+    "id": "30942",
+    "name": "H1N1",
+    "type": "trans",
+    "parent": "30263",
+    "general_id": 3,
+    "upper_node": "30629"
+  },
+  {
+    "id": "30452",
+    "name": "Influenza A",
+    "type": "trans",
+    "parent": "30263",
+    "general_id": 3,
+    "upper_node": "30942"
+  },
+  {
+    "id": "30453",
+    "name": "Influenza B",
+    "type": "trans",
+    "parent": "30263",
+    "general_id": 3,
+    "upper_node": "30452"
+  },
+  {
+    "id": "30132",
+    "name": "Japanese encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30263"
+  },
+  {
+    "id": "30820",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30132",
+    "general_id": 3,
+    "upper_node": "30263"
+  },
+  {
+    "id": "30133",
+    "name": "Japanese encephalitis",
+    "type": "trans",
+    "parent": "30132",
+    "general_id": 3,
+    "upper_node": "30820"
+  },
+  {
+    "id": "30384",
+    "name": "Japanese encephalitis virus",
+    "type": "trans",
+    "parent": "30132",
+    "general_id": 3,
+    "upper_node": "30133"
+  },
+  {
+    "id": "30505",
+    "name": "Kyasanur Forest Disease",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30132"
+  },
+  {
+    "id": "30506",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30505",
+    "general_id": 3,
+    "upper_node": "30132"
+  },
+  {
+    "id": "30528",
+    "name": "Lassa fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30505"
+  },
+  {
+    "id": "30529",
+    "name": "Lassa fever virus",
+    "type": "trans",
+    "parent": "30528",
+    "general_id": 3,
+    "upper_node": "30505"
+  },
+  {
+    "id": "30388",
+    "name": "Marburg hemorrhagic fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30528"
+  },
+  {
+    "id": "30389",
+    "name": "Marburg virus",
+    "type": "trans",
+    "parent": "30388",
+    "general_id": 3,
+    "upper_node": "30528"
+  },
+  {
+    "id": "30617",
+    "name": "Mayaro Virus Disease",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30388"
+  },
+  {
+    "id": "30618",
+    "name": "Mayaro Virus",
+    "type": "trans",
+    "parent": "30617",
+    "general_id": 3,
+    "upper_node": "30388"
+  },
+  {
+    "id": "30336",
+    "name": "Measles",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30617"
+  },
+  {
+    "id": "30337",
+    "name": "Measles virus",
+    "type": "trans",
+    "parent": "30336",
+    "general_id": 3,
+    "upper_node": "30617"
+  },
+  {
+    "id": "30692",
+    "name": "Meningitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30336"
+  },
+  {
+    "id": "30244",
+    "name": "Monkeypox",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30692"
+  },
+  {
+    "id": "30445",
+    "name": "Mumps",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30244"
+  },
+  {
+    "id": "30446",
+    "name": "Mump virus",
+    "type": "trans",
+    "parent": "30445",
+    "general_id": 3,
+    "upper_node": "30244"
+  },
+  {
+    "id": "30276",
+    "name": "Murray Valley Encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30445"
+  },
+  {
+    "id": "30387",
+    "name": "Flaviviridae",
+    "type": "trans",
+    "parent": "30276",
+    "general_id": 3,
+    "upper_node": "30445"
+  },
+  {
+    "id": "30819",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30276",
+    "general_id": 3,
+    "upper_node": "30387"
+  },
+  {
+    "id": "30905",
+    "name": "Nephropathia epidemica",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30276"
+  },
+  {
+    "id": "30906",
+    "name": "hantavirus infection",
+    "type": "trans",
+    "parent": "30905",
+    "general_id": 3,
+    "upper_node": "30276"
+  },
+  {
+    "id": "30085",
+    "name": "Nipah Virus",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30905"
+  },
+  {
+    "id": "30391",
+    "name": "Paramyxoviridae",
+    "type": "trans",
+    "parent": "30085",
+    "general_id": 3,
+    "upper_node": "30905"
+  },
+  {
+    "id": "30370",
+    "name": "No-specified",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30085"
+  },
+  {
+    "id": "30143",
+    "name": "Norovirus",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30370"
+  },
+  {
+    "id": "30807",
+    "name": "Omsk haemorrhagic fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30143"
+  },
+  {
+    "id": "30808",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30807",
+    "general_id": 3,
+    "upper_node": "30143"
+  },
+  {
+    "id": "30907",
+    "name": "Oropouche fever ",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30807"
+  },
+  {
+    "id": "30908",
+    "name": "Oropouche virus",
+    "type": "trans",
+    "parent": "30907",
+    "general_id": 3,
+    "upper_node": "30807"
+  },
+  {
+    "id": "30205",
+    "name": "Paramyxovirus",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30907"
+  },
+  {
+    "id": "30348",
+    "name": "Pneumonia ",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30205"
+  },
+  {
+    "id": "30439",
+    "name": "Pneumocystis jirovecii",
+    "type": "trans",
+    "parent": "30348",
+    "general_id": 3,
+    "upper_node": "30205"
+  },
+  {
+    "id": "30441",
+    "name": "Poliomyelitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30348"
+  },
+  {
+    "id": "30442",
+    "name": "Poliovirus",
+    "type": "trans",
+    "parent": "30441",
+    "general_id": 3,
+    "upper_node": "30348"
+  },
+  {
+    "id": "30662",
+    "name": "Powassan Virus",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30441"
+  },
+  {
+    "id": "30663",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30662",
+    "general_id": 3,
+    "upper_node": "30441"
+  },
+  {
+    "id": "30449",
+    "name": "Puulmala Virus Infection",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30662"
+  },
+  {
+    "id": "30477",
+    "name": "Puumala orthohantavirus",
+    "type": "trans",
+    "parent": "30449",
+    "general_id": 3,
+    "upper_node": "30662"
+  },
+  {
+    "id": "30478",
+    "name": "Puumala sp.",
+    "type": "trans",
+    "parent": "30449",
+    "general_id": 3,
+    "upper_node": "30477"
+  },
+  {
+    "id": "30272",
+    "name": "Rabies",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30449"
+  },
+  {
+    "id": "30273",
+    "name": "Lyssaviruses",
+    "type": "trans",
+    "parent": "30272",
+    "general_id": 3,
+    "upper_node": "30449"
+  },
+  {
+    "id": "30421",
+    "name": "Respiratory Syncytial Virus Infection",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30272"
+  },
+  {
+    "id": "30444",
+    "name": "Human orthopneumovirus",
+    "type": "trans",
+    "parent": "30421",
+    "general_id": 3,
+    "upper_node": "30272"
+  },
+  {
+    "id": "30081",
+    "name": "Rift Valley Fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30421"
+  },
+  {
+    "id": "30296",
+    "name": "Phlebovirus",
+    "type": "trans",
+    "parent": "30081",
+    "general_id": 3,
+    "upper_node": "30421"
+  },
+  {
+    "id": "30965",
+    "name": "Rift Valley Fever virus",
+    "type": "trans",
+    "parent": "30081",
+    "general_id": 3,
+    "upper_node": "30296"
+  },
+  {
+    "id": "30190",
+    "name": "Ross River disease",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30081"
+  },
+  {
+    "id": "30297",
+    "name": "Ross River Virus",
+    "type": "trans",
+    "parent": "30190",
+    "general_id": 3,
+    "upper_node": "30081"
+  },
+  {
+    "id": "30185",
+    "name": "Rotavirus",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30190"
+  },
+  {
+    "id": "30826",
+    "name": "Sandfly fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30185"
+  },
+  {
+    "id": "30426",
+    "name": "SARS",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30826"
+  },
+  {
+    "id": "30427",
+    "name": "SARS-CoV",
+    "type": "trans",
+    "parent": "30426",
+    "general_id": 3,
+    "upper_node": "30826"
+  },
+  {
+    "id": "30379",
+    "name": "Severe Fever with Thrombocytopenia Syndrome",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30426"
+  },
+  {
+    "id": "30380",
+    "name": "Phlebovirus",
+    "type": "trans",
+    "parent": "30379",
+    "general_id": 3,
+    "upper_node": "30426"
+  },
+  {
+    "id": "30920",
+    "name": "Sindbis fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30379"
+  },
+  {
+    "id": "30921",
+    "name": "Sindbis virus",
+    "type": "trans",
+    "parent": "30920",
+    "general_id": 3,
+    "upper_node": "30379"
+  },
+  {
+    "id": "30696",
+    "name": "Smallpox",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30920"
+  },
+  {
+    "id": "30697",
+    "name": "Variola virus",
+    "type": "trans",
+    "parent": "30696",
+    "general_id": 3,
+    "upper_node": "30920"
+  },
+  {
+    "id": "30644",
+    "name": "South American hemorrhagic fever (SAHF)",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30696"
+  },
+  {
+    "id": "30039",
+    "name": "St. Louis encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30644"
+  },
+  {
+    "id": "30041",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30039",
+    "general_id": 3,
+    "upper_node": "30644"
+  },
+  {
+    "id": "30922",
+    "name": "Tahyna virus infection",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30039"
+  },
+  {
+    "id": "30923",
+    "name": "Tahyna virus",
+    "type": "trans",
+    "parent": "30922",
+    "general_id": 3,
+    "upper_node": "30039"
+  },
+  {
+    "id": "30113",
+    "name": "Tick-borne encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30922"
+  },
+  {
+    "id": "30255",
+    "name": "Flaviviridae",
+    "type": "trans",
+    "parent": "30113",
+    "general_id": 3,
+    "upper_node": "30922"
+  },
+  {
+    "id": "30429",
+    "name": "Utusu Virus Infection",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30113"
+  },
+  {
+    "id": "30430",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30429",
+    "general_id": 3,
+    "upper_node": "30113"
+  },
+  {
+    "id": "30488",
+    "name": "Venezuelan equine encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30429"
+  },
+  {
+    "id": "30489",
+    "name": "Arbovirus",
+    "type": "trans",
+    "parent": "30488",
+    "general_id": 3,
+    "upper_node": "30429"
+  },
+  {
+    "id": "30598",
+    "name": "Venezuelan Hemorrhagic Fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30488"
+  },
+  {
+    "id": "30599",
+    "name": "Guanarito virus",
+    "type": "trans",
+    "parent": "30598",
+    "general_id": 3,
+    "upper_node": "30488"
+  },
+  {
+    "id": "30564",
+    "name": "Warts",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30598"
+  },
+  {
+    "id": "30565",
+    "name": "Human Papillomavirus (HPV)",
+    "type": "trans",
+    "parent": "30564",
+    "general_id": 3,
+    "upper_node": "30598"
+  },
+  {
+    "id": "30924",
+    "name": "Wesselbron disease",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30564"
+  },
+  {
+    "id": "30925",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30924",
+    "general_id": 3,
+    "upper_node": "30564"
+  },
+  {
+    "id": "30082",
+    "name": "West Nile Fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30924"
+  },
+  {
+    "id": "30105",
+    "name": "Flaviviridae",
+    "type": "trans",
+    "parent": "30082",
+    "general_id": 3,
+    "upper_node": "30924"
+  },
+  {
+    "id": "30483",
+    "name": "West Nile Virus",
+    "type": "trans",
+    "parent": "30082",
+    "general_id": 3,
+    "upper_node": "30105"
+  },
+  {
+    "id": "30422",
+    "name": "Western Equine Encephalitis",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30082"
+  },
+  {
+    "id": "30423",
+    "name": "WEE virus",
+    "type": "trans",
+    "parent": "30422",
+    "general_id": 3,
+    "upper_node": "30082"
+  },
+  {
+    "id": "30123",
+    "name": "Yellow fever",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30422"
+  },
+  {
+    "id": "30964",
+    "name": "Yellow fever virus",
+    "type": "trans",
+    "parent": "30123",
+    "general_id": 3,
+    "upper_node": "30422"
+  },
+  {
+    "id": "30122",
+    "name": "Zika ",
+    "type": "trans",
+    "parent": "30022",
+    "general_id": 3,
+    "upper_node": "30123"
+  },
+  {
+    "id": "30156",
+    "name": "Flavivirus",
+    "type": "trans",
+    "parent": "30122",
+    "general_id": 3,
+    "upper_node": "30123"
+  },
+  {
+    "id": "30931",
+    "name": "Aflatoxicosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30122"
+  },
+  {
+    "id": "30932",
+    "name": "Mold",
+    "type": "trans",
+    "parent": "30931",
+    "general_id": 4,
+    "upper_node": "30122"
+  },
+  {
+    "id": "30944",
+    "name": "Allergic rhinitis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30931"
+  },
+  {
+    "id": "30947",
+    "name": "Allergic diseases",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30944"
+  },
+  {
+    "id": "30655",
+    "name": "Aspergillosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30947"
+  },
+  {
+    "id": "30656",
+    "name": "Aspergillus",
+    "type": "trans",
+    "parent": "30655",
+    "general_id": 4,
+    "upper_node": "30947"
+  },
+  {
+    "id": "30933",
+    "name": "Aspergillus flavus",
+    "type": "trans",
+    "parent": "30655",
+    "general_id": 4,
+    "upper_node": "30656"
+  },
+  {
+    "id": "30927",
+    "name": "Aspergillus niger",
+    "type": "trans",
+    "parent": "30655",
+    "general_id": 4,
+    "upper_node": "30933"
+  },
+  {
+    "id": "30852",
+    "name": "Asthma",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30655"
+  },
+  {
+    "id": "30332",
+    "name": "Blastomycosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30852"
+  },
+  {
+    "id": "30333",
+    "name": "Blastomyces dermatitidis",
+    "type": "trans",
+    "parent": "30332",
+    "general_id": 4,
+    "upper_node": "30852"
+  },
+  {
+    "id": "30775",
+    "name": "Chromoblastomycosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30332"
+  },
+  {
+    "id": "30634",
+    "name": "Coccidioidomycosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30775"
+  },
+  {
+    "id": "30635",
+    "name": "Coccidioides immitis",
+    "type": "trans",
+    "parent": "30634",
+    "general_id": 4,
+    "upper_node": "30775"
+  },
+  {
+    "id": "30541",
+    "name": "Cryptococcosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30634"
+  },
+  {
+    "id": "30542",
+    "name": "Cryptococcosis gatti",
+    "type": "trans",
+    "parent": "30541",
+    "general_id": 4,
+    "upper_node": "30634"
+  },
+  {
+    "id": "30480",
+    "name": "Dermatophytosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30541"
+  },
+  {
+    "id": "30560",
+    "name": "Tinea",
+    "type": "trans",
+    "parent": "30480",
+    "general_id": 4,
+    "upper_node": "30541"
+  },
+  {
+    "id": "30481",
+    "name": "Tinea corporis",
+    "type": "trans",
+    "parent": "30480",
+    "general_id": 4,
+    "upper_node": "30560"
+  },
+  {
+    "id": "30482",
+    "name": "Tinea pedis",
+    "type": "trans",
+    "parent": "30480",
+    "general_id": 4,
+    "upper_node": "30481"
+  },
+  {
+    "id": "30063",
+    "name": "Fungal infection",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30480"
+  },
+  {
+    "id": "30537",
+    "name": "Candida auris",
+    "type": "trans",
+    "parent": "30063",
+    "general_id": 4,
+    "upper_node": "30480"
+  },
+  {
+    "id": "30247",
+    "name": "Cladosporium sp.",
+    "type": "trans",
+    "parent": "30063",
+    "general_id": 4,
+    "upper_node": "30537"
+  },
+  {
+    "id": "30561",
+    "name": "Malassezia",
+    "type": "trans",
+    "parent": "30063",
+    "general_id": 4,
+    "upper_node": "30247"
+  },
+  {
+    "id": "30213",
+    "name": "Paecilomyces",
+    "type": "trans",
+    "parent": "30063",
+    "general_id": 4,
+    "upper_node": "30561"
+  },
+  {
+    "id": "30572",
+    "name": "Tinea corporis",
+    "type": "trans",
+    "parent": "30063",
+    "general_id": 4,
+    "upper_node": "30213"
+  },
+  {
+    "id": "30573",
+    "name": "Tinea pedis",
+    "type": "trans",
+    "parent": "30063",
+    "general_id": 4,
+    "upper_node": "30572"
+  },
+  {
+    "id": "30212",
+    "name": "Trichoderma",
+    "type": "trans",
+    "parent": "30063",
+    "general_id": 4,
+    "upper_node": "30573"
+  },
+  {
+    "id": "30064",
+    "name": "Unspecified",
+    "type": "trans",
+    "parent": "30063",
+    "general_id": 4,
+    "upper_node": "30212"
+  },
+  {
+    "id": "30622",
+    "name": "Immune system suppression",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30063"
+  },
+  {
+    "id": "30623",
+    "name": "Aflatoxins",
+    "type": "trans",
+    "parent": "30622",
+    "general_id": 4,
+    "upper_node": "30063"
+  },
+  {
+    "id": "30928",
+    "name": "Microsporidiosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30622"
+  },
+  {
+    "id": "30930",
+    "name": "Encephalitozoon hellem ",
+    "type": "trans",
+    "parent": "30928",
+    "general_id": 4,
+    "upper_node": "30622"
+  },
+  {
+    "id": "30929",
+    "name": "Enterocytozoon bieneusi",
+    "type": "trans",
+    "parent": "30928",
+    "general_id": 4,
+    "upper_node": "30930"
+  },
+  {
+    "id": "30330",
+    "name": "Mucormycosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30928"
+  },
+  {
+    "id": "30717",
+    "name": "Apophysomyces trapeziformis",
+    "type": "trans",
+    "parent": "30330",
+    "general_id": 4,
+    "upper_node": "30928"
+  },
+  {
+    "id": "30331",
+    "name": "Mucormycetes",
+    "type": "trans",
+    "parent": "30330",
+    "general_id": 4,
+    "upper_node": "30717"
+  },
+  {
+    "id": "30262",
+    "name": "Not-specified",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30330"
+  },
+  {
+    "id": "30815",
+    "name": "Paracoccidioidomycosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30262"
+  },
+  {
+    "id": "30816",
+    "name": "Paracoccidioides spp",
+    "type": "trans",
+    "parent": "30815",
+    "general_id": 4,
+    "upper_node": "30262"
+  },
+  {
+    "id": "30570",
+    "name": "Pneumocystis pneumonia",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30815"
+  },
+  {
+    "id": "30571",
+    "name": "Pneumocystis jirovecii",
+    "type": "trans",
+    "parent": "30570",
+    "general_id": 4,
+    "upper_node": "30815"
+  },
+  {
+    "id": "30519",
+    "name": "Respiratory disease",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30570"
+  },
+  {
+    "id": "30520",
+    "name": "Mold",
+    "type": "trans",
+    "parent": "30519",
+    "general_id": 4,
+    "upper_node": "30570"
+  },
+  {
+    "id": "30141",
+    "name": "Rhino-orbital-cerebral-mucormycosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30519"
+  },
+  {
+    "id": "30142",
+    "name": "Rhizopus oryzae",
+    "type": "trans",
+    "parent": "30141",
+    "general_id": 4,
+    "upper_node": "30519"
+  },
+  {
+    "id": "30669",
+    "name": "Rhinosporidiosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30141"
+  },
+  {
+    "id": "30670",
+    "name": "Rhinosporidium seeberi",
+    "type": "trans",
+    "parent": "30669",
+    "general_id": 4,
+    "upper_node": "30141"
+  },
+  {
+    "id": "30210",
+    "name": "Talaromycosis",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30669"
+  },
+  {
+    "id": "30211",
+    "name": "Penicillium sp.",
+    "type": "trans",
+    "parent": "30210",
+    "general_id": 4,
+    "upper_node": "30669"
+  },
+  {
+    "id": "30855",
+    "name": "Thunderstorm asthma",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30210"
+  },
+  {
+    "id": "30856",
+    "name": "Spores",
+    "type": "trans",
+    "parent": "30855",
+    "general_id": 4,
+    "upper_node": "30210"
+  },
+  {
+    "id": "30718",
+    "name": "Tsunami lung",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30855"
+  },
+  {
+    "id": "30149",
+    "name": "Valley Fever",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30718"
+  },
+  {
+    "id": "30233",
+    "name": "Coccidioides",
+    "type": "trans",
+    "parent": "30149",
+    "general_id": 4,
+    "upper_node": "30718"
+  },
+  {
+    "id": "30150",
+    "name": "Coccidioides immitis",
+    "type": "trans",
+    "parent": "30149",
+    "general_id": 4,
+    "upper_node": "30233"
+  },
+  {
+    "id": "30550",
+    "name": "coccidioido mycosis",
+    "type": "trans",
+    "parent": "30149",
+    "general_id": 4,
+    "upper_node": "30150"
+  },
+  {
+    "id": "30251",
+    "name": "Cocciodioides immitis",
+    "type": "trans",
+    "parent": "30149",
+    "general_id": 4,
+    "upper_node": "30550"
+  },
+  {
+    "id": "30325",
+    "name": "Wound infection",
+    "type": "trans",
+    "parent": "30062",
+    "general_id": 4,
+    "upper_node": "30149"
+  },
+  {
+    "id": "30328",
+    "name": "Apophysomyces elegans",
+    "type": "trans",
+    "parent": "30325",
+    "general_id": 4,
+    "upper_node": "30149"
+  },
+  {
+    "id": "30326",
+    "name": "Cladophialophora bantiana",
+    "type": "trans",
+    "parent": "30325",
+    "general_id": 4,
+    "upper_node": "30328"
+  },
+  {
+    "id": "30327",
+    "name": "Mucor sp.",
+    "type": "trans",
+    "parent": "30325",
+    "general_id": 4,
+    "upper_node": "30326"
+  },
+  {
+    "id": "30976",
+    "name": "Intestinal infectious diseases",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30325"
+  },
+  {
+    "id": "30508",
+    "name": "Acanthamebiasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30976"
+  },
+  {
+    "id": "30658",
+    "name": "Acanthamoeba keratitis",
+    "type": "trans",
+    "parent": "30508",
+    "general_id": 5,
+    "upper_node": "30976"
+  },
+  {
+    "id": "30979",
+    "name": " Acanthamoeba Polyphaga",
+    "type": "trans",
+    "parent": "30508",
+    "general_id": 5,
+    "upper_node": "30658"
+  },
+  {
+    "id": "30509",
+    "name": "Acanthamoeba spp.",
+    "type": "trans",
+    "parent": "30508",
+    "general_id": 5,
+    "upper_node": "30979"
+  },
+  {
+    "id": "30256",
+    "name": "Babesiosis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30508"
+  },
+  {
+    "id": "30257",
+    "name": "Babesia",
+    "type": "trans",
+    "parent": "30256",
+    "general_id": 5,
+    "upper_node": "30508"
+  },
+  {
+    "id": "30495",
+    "name": "Balantidiasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30256"
+  },
+  {
+    "id": "30496",
+    "name": "Balantidium coli",
+    "type": "trans",
+    "parent": "30495",
+    "general_id": 5,
+    "upper_node": "30256"
+  },
+  {
+    "id": "30845",
+    "name": "Blastocystosis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30495"
+  },
+  {
+    "id": "30203",
+    "name": "Chagas disease (American trypanosomiasis)",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30845"
+  },
+  {
+    "id": "30204",
+    "name": "Trypanosoma cruzi",
+    "type": "trans",
+    "parent": "30203",
+    "general_id": 5,
+    "upper_node": "30845"
+  },
+  {
+    "id": "30135",
+    "name": "Cryptosporidiosis ",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30203"
+  },
+  {
+    "id": "30136",
+    "name": "Cryptosporidium",
+    "type": "trans",
+    "parent": "30135",
+    "general_id": 5,
+    "upper_node": "30203"
+  },
+  {
+    "id": "30435",
+    "name": "Cryptosporidium parvum",
+    "type": "trans",
+    "parent": "30135",
+    "general_id": 5,
+    "upper_node": "30136"
+  },
+  {
+    "id": "30821",
+    "name": "Cutaneous leishmaniasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30135"
+  },
+  {
+    "id": "30822",
+    "name": "Leishmania ",
+    "type": "trans",
+    "parent": "30821",
+    "general_id": 5,
+    "upper_node": "30135"
+  },
+  {
+    "id": "30294",
+    "name": "Cyclosporiasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30821"
+  },
+  {
+    "id": "30295",
+    "name": "Cyclospora",
+    "type": "trans",
+    "parent": "30294",
+    "general_id": 5,
+    "upper_node": "30821"
+  },
+  {
+    "id": "30639",
+    "name": "Cyclospora cayetanensis",
+    "type": "trans",
+    "parent": "30294",
+    "general_id": 5,
+    "upper_node": "30295"
+  },
+  {
+    "id": "30103",
+    "name": "Diarrhea",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30294"
+  },
+  {
+    "id": "30104",
+    "name": "Cryptosporidium parvum",
+    "type": "trans",
+    "parent": "30103",
+    "general_id": 5,
+    "upper_node": "30294"
+  },
+  {
+    "id": "30939",
+    "name": "Cryptosporidium",
+    "type": "trans",
+    "parent": "30103",
+    "general_id": 5,
+    "upper_node": "30104"
+  },
+  {
+    "id": "30140",
+    "name": "Giardia lambia",
+    "type": "trans",
+    "parent": "30103",
+    "general_id": 5,
+    "upper_node": "30939"
+  },
+  {
+    "id": "30137",
+    "name": "Giardiasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30103"
+  },
+  {
+    "id": "30139",
+    "name": "Giardia",
+    "type": "trans",
+    "parent": "30137",
+    "general_id": 5,
+    "upper_node": "30103"
+  },
+  {
+    "id": "30824",
+    "name": "Giardia duodenalis",
+    "type": "trans",
+    "parent": "30137",
+    "general_id": 5,
+    "upper_node": "30139"
+  },
+  {
+    "id": "30704",
+    "name": "Giardia intestinalis",
+    "type": "trans",
+    "parent": "30137",
+    "general_id": 5,
+    "upper_node": "30824"
+  },
+  {
+    "id": "30138",
+    "name": "Giardia lambia",
+    "type": "trans",
+    "parent": "30137",
+    "general_id": 5,
+    "upper_node": "30704"
+  },
+  {
+    "id": "30640",
+    "name": "Giardia lamblia",
+    "type": "trans",
+    "parent": "30137",
+    "general_id": 5,
+    "upper_node": "30138"
+  },
+  {
+    "id": "30812",
+    "name": "Human African trypanosomiasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30137"
+  },
+  {
+    "id": "30814",
+    "name": "Trypanosoma brucei.",
+    "type": "trans",
+    "parent": "30812",
+    "general_id": 5,
+    "upper_node": "30137"
+  },
+  {
+    "id": "30196",
+    "name": "Leishmaniasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30812"
+  },
+  {
+    "id": "30342",
+    "name": "Leishmania genus",
+    "type": "trans",
+    "parent": "30196",
+    "general_id": 5,
+    "upper_node": "30812"
+  },
+  {
+    "id": "30080",
+    "name": "Malaria",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30196"
+  },
+  {
+    "id": "30279",
+    "name": "Not Specified",
+    "type": "trans",
+    "parent": "30080",
+    "general_id": 5,
+    "upper_node": "30196"
+  },
+  {
+    "id": "30364",
+    "name": "Plasmodium",
+    "type": "trans",
+    "parent": "30080",
+    "general_id": 5,
+    "upper_node": "30279"
+  },
+  {
+    "id": "30134",
+    "name": "Plasmodium falciparum",
+    "type": "trans",
+    "parent": "30080",
+    "general_id": 5,
+    "upper_node": "30364"
+  },
+  {
+    "id": "30155",
+    "name": "Plasmodium vivax",
+    "type": "trans",
+    "parent": "30080",
+    "general_id": 5,
+    "upper_node": "30134"
+  },
+  {
+    "id": "30163",
+    "name": "Toxoplasmosis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30080"
+  },
+  {
+    "id": "30164",
+    "name": "Toxoplasma gondii",
+    "type": "trans",
+    "parent": "30163",
+    "general_id": 5,
+    "upper_node": "30080"
+  },
+  {
+    "id": "30874",
+    "name": "Trichomoniasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30163"
+  },
+  {
+    "id": "30875",
+    "name": "Trichomonas vaginalis",
+    "type": "trans",
+    "parent": "30874",
+    "general_id": 5,
+    "upper_node": "30163"
+  },
+  {
+    "id": "30198",
+    "name": "Trypanosomiasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30874"
+  },
+  {
+    "id": "30199",
+    "name": "Trypanosoma spp.",
+    "type": "trans",
+    "parent": "30198",
+    "general_id": 5,
+    "upper_node": "30874"
+  },
+  {
+    "id": "30713",
+    "name": "Visceral leishmaniasis",
+    "type": "trans",
+    "parent": "30033",
+    "general_id": 5,
+    "upper_node": "30198"
+  },
+  {
+    "id": "30786",
+    "name": "Leishmania sp.",
+    "type": "trans",
+    "parent": "30713",
+    "general_id": 5,
+    "upper_node": "30198"
+  },
+  {
+    "id": "30377",
+    "name": "Angiostrongyliasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30713"
+  },
+  {
+    "id": "30378",
+    "name": "Angiostrongylus cantonensis",
+    "type": "trans",
+    "parent": "30377",
+    "general_id": 6,
+    "upper_node": "30713"
+  },
+  {
+    "id": "30940",
+    "name": "Dracunculiasis / Guinea worm disease",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30377"
+  },
+  {
+    "id": "30941",
+    "name": "Dracunculus medinensis",
+    "type": "trans",
+    "parent": "30940",
+    "general_id": 6,
+    "upper_node": "30377"
+  },
+  {
+    "id": "30960",
+    "name": "Dermatitis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30940"
+  },
+  {
+    "id": "30968",
+    "name": "Toxocariasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30960"
+  },
+  {
+    "id": "30969",
+    "name": "Toxocara",
+    "type": "trans",
+    "parent": "30968",
+    "general_id": 6,
+    "upper_node": "30960"
+  },
+  {
+    "id": "30534",
+    "name": "Anisakiasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30968"
+  },
+  {
+    "id": "30535",
+    "name": "Anisakis simplex",
+    "type": "trans",
+    "parent": "30534",
+    "general_id": 6,
+    "upper_node": "30968"
+  },
+  {
+    "id": "30536",
+    "name": "Pseudoterranova decipiens",
+    "type": "trans",
+    "parent": "30534",
+    "general_id": 6,
+    "upper_node": "30535"
+  },
+  {
+    "id": "30695",
+    "name": "Ascarididae",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30534"
+  },
+  {
+    "id": "30719",
+    "name": "A. lumbricoides",
+    "type": "trans",
+    "parent": "30695",
+    "general_id": 6,
+    "upper_node": "30534"
+  },
+  {
+    "id": "30270",
+    "name": "Dirofilariasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30695"
+  },
+  {
+    "id": "30753",
+    "name": "Dirofilaria immitis",
+    "type": "trans",
+    "parent": "30270",
+    "general_id": 6,
+    "upper_node": "30695"
+  },
+  {
+    "id": "30860",
+    "name": "Dirofilaria spp.",
+    "type": "trans",
+    "parent": "30270",
+    "general_id": 6,
+    "upper_node": "30753"
+  },
+  {
+    "id": "30832",
+    "name": "Enterobiasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30270"
+  },
+  {
+    "id": "30894",
+    "name": "Enterobius vermicularis",
+    "type": "trans",
+    "parent": "30832",
+    "general_id": 6,
+    "upper_node": "30270"
+  },
+  {
+    "id": "30153",
+    "name": "Filariasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30832"
+  },
+  {
+    "id": "30487",
+    "name": "Bancroftian filariasis",
+    "type": "trans",
+    "parent": "30153",
+    "general_id": 6,
+    "upper_node": "30832"
+  },
+  {
+    "id": "30486",
+    "name": "Lymphatic filariasis",
+    "type": "trans",
+    "parent": "30153",
+    "general_id": 6,
+    "upper_node": "30487"
+  },
+  {
+    "id": "30683",
+    "name": "Mansonella ozzardi",
+    "type": "trans",
+    "parent": "30153",
+    "general_id": 6,
+    "upper_node": "30486"
+  },
+  {
+    "id": "30154",
+    "name": "Mansonella perstans",
+    "type": "trans",
+    "parent": "30153",
+    "general_id": 6,
+    "upper_node": "30683"
+  },
+  {
+    "id": "30404",
+    "name": "Not Specified",
+    "type": "trans",
+    "parent": "30153",
+    "general_id": 6,
+    "upper_node": "30154"
+  },
+  {
+    "id": "30289",
+    "name": "Wuchereria bancrofti",
+    "type": "trans",
+    "parent": "30153",
+    "general_id": 6,
+    "upper_node": "30404"
+  },
+  {
+    "id": "30522",
+    "name": "Geohelminth infection",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30153"
+  },
+  {
+    "id": "30523",
+    "name": "Geohelminths",
+    "type": "trans",
+    "parent": "30522",
+    "general_id": 6,
+    "upper_node": "30153"
+  },
+  {
+    "id": "30265",
+    "name": "Hookworm infections",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30522"
+  },
+  {
+    "id": "30831",
+    "name": "Necator americanus",
+    "type": "trans",
+    "parent": "30265",
+    "general_id": 6,
+    "upper_node": "30522"
+  },
+  {
+    "id": "30682",
+    "name": "Human cutaneous larva migrans",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30265"
+  },
+  {
+    "id": "30752",
+    "name": "Hookworm larvae",
+    "type": "trans",
+    "parent": "30682",
+    "general_id": 6,
+    "upper_node": "30265"
+  },
+  {
+    "id": "30684",
+    "name": "Mansonelliasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30682"
+  },
+  {
+    "id": "30711",
+    "name": "Mansonella perstans",
+    "type": "trans",
+    "parent": "30684",
+    "general_id": 6,
+    "upper_node": "30682"
+  },
+  {
+    "id": "30611",
+    "name": "Not specified",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30684"
+  },
+  {
+    "id": "30407",
+    "name": "Onchocerciasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30611"
+  },
+  {
+    "id": "30408",
+    "name": "Onchocerca volvulus",
+    "type": "trans",
+    "parent": "30407",
+    "general_id": 6,
+    "upper_node": "30611"
+  },
+  {
+    "id": "30615",
+    "name": "Strongyloidiasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30407"
+  },
+  {
+    "id": "30616",
+    "name": "Strongyloides",
+    "type": "trans",
+    "parent": "30615",
+    "general_id": 6,
+    "upper_node": "30407"
+  },
+  {
+    "id": "30787",
+    "name": "Ternidens deminatus infection",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30615"
+  },
+  {
+    "id": "30788",
+    "name": "Ternidens deminatus",
+    "type": "trans",
+    "parent": "30787",
+    "general_id": 6,
+    "upper_node": "30615"
+  },
+  {
+    "id": "30566",
+    "name": "Trichinellosis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30787"
+  },
+  {
+    "id": "30784",
+    "name": "Trichuriasis",
+    "type": "trans",
+    "parent": "30151",
+    "general_id": 6,
+    "upper_node": "30566"
+  },
+  {
+    "id": "30785",
+    "name": "Trichuris trichiura",
+    "type": "trans",
+    "parent": "30784",
+    "general_id": 6,
+    "upper_node": "30566"
+  },
+  {
+    "id": "30499",
+    "name": "Clonorchiasis",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30784"
+  },
+  {
+    "id": "30500",
+    "name": "Clonorchis sinensis",
+    "type": "trans",
+    "parent": "30499",
+    "general_id": 7,
+    "upper_node": "30784"
+  },
+  {
+    "id": "30532",
+    "name": "Diphyllobothrium latum infection",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30499"
+  },
+  {
+    "id": "30533",
+    "name": "Diphyllobothrium latum",
+    "type": "trans",
+    "parent": "30532",
+    "general_id": 7,
+    "upper_node": "30499"
+  },
+  {
+    "id": "30530",
+    "name": "Diphyllobothrium pacificum infection",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30532"
+  },
+  {
+    "id": "30531",
+    "name": "Diphyllobothrium pacificum",
+    "type": "trans",
+    "parent": "30530",
+    "general_id": 7,
+    "upper_node": "30532"
+  },
+  {
+    "id": "30352",
+    "name": "Echinococcosis",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30530"
+  },
+  {
+    "id": "30353",
+    "name": "E. granulosis",
+    "type": "trans",
+    "parent": "30352",
+    "general_id": 7,
+    "upper_node": "30530"
+  },
+  {
+    "id": "30354",
+    "name": "E. multilocularis",
+    "type": "trans",
+    "parent": "30352",
+    "general_id": 7,
+    "upper_node": "30353"
+  },
+  {
+    "id": "30835",
+    "name": "Fascioliasis ",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30352"
+  },
+  {
+    "id": "30915",
+    "name": "Fasciola gigantica",
+    "type": "trans",
+    "parent": "30835",
+    "general_id": 7,
+    "upper_node": "30352"
+  },
+  {
+    "id": "30836",
+    "name": "Fasciola hepatica",
+    "type": "trans",
+    "parent": "30835",
+    "general_id": 7,
+    "upper_node": "30915"
+  },
+  {
+    "id": "30621",
+    "name": "Liver fluke infection",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30835"
+  },
+  {
+    "id": "30235",
+    "name": "Snail fever/Schistosomiasis",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30621"
+  },
+  {
+    "id": "30236",
+    "name": "Schistosoma haematobium",
+    "type": "trans",
+    "parent": "30235",
+    "general_id": 7,
+    "upper_node": "30621"
+  },
+  {
+    "id": "30357",
+    "name": "Schistosoma japonicum",
+    "type": "trans",
+    "parent": "30235",
+    "general_id": 7,
+    "upper_node": "30236"
+  },
+  {
+    "id": "30409",
+    "name": "Schistosoma mansoni",
+    "type": "trans",
+    "parent": "30235",
+    "general_id": 7,
+    "upper_node": "30357"
+  },
+  {
+    "id": "30909",
+    "name": "Schistosoma spp.",
+    "type": "trans",
+    "parent": "30235",
+    "general_id": 7,
+    "upper_node": "30409"
+  },
+  {
+    "id": "30237",
+    "name": "Schistosomiasis ",
+    "type": "trans",
+    "parent": "30235",
+    "general_id": 7,
+    "upper_node": "30909"
+  },
+  {
+    "id": "30581",
+    "name": "Swimmer's Itch/Cercarial dermatitis",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30235"
+  },
+  {
+    "id": "30582",
+    "name": "Schistosoma spindale",
+    "type": "trans",
+    "parent": "30581",
+    "general_id": 7,
+    "upper_node": "30235"
+  },
+  {
+    "id": "30583",
+    "name": "Trichobilharzia",
+    "type": "trans",
+    "parent": "30581",
+    "general_id": 7,
+    "upper_node": "30582"
+  },
+  {
+    "id": "30823",
+    "name": "Taeniasis",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30581"
+  },
+  {
+    "id": "30825",
+    "name": "Taenia solium",
+    "type": "trans",
+    "parent": "30823",
+    "general_id": 7,
+    "upper_node": "30581"
+  },
+  {
+    "id": "30664",
+    "name": "Trematodiases ",
+    "type": "trans",
+    "parent": "30351",
+    "general_id": 7,
+    "upper_node": "30823"
+  },
+  {
+    "id": "30665",
+    "name": "Trematode",
+    "type": "trans",
+    "parent": "30664",
+    "general_id": 7,
+    "upper_node": "30823"
+  },
+  {
+    "id": "30649",
+    "name": "Acarina ",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30664"
+  },
+  {
+    "id": "30945",
+    "name": "Anaphylaxis",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30649"
+  },
+  {
+    "id": "30946",
+    "name": "Lepidopterism",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30945"
+  },
+  {
+    "id": "30600",
+    "name": "Black Fly Bites",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30946"
+  },
+  {
+    "id": "30601",
+    "name": "Simulium damnosum senso lato",
+    "type": "trans",
+    "parent": "30600",
+    "general_id": 8,
+    "upper_node": "30946"
+  },
+  {
+    "id": "30888",
+    "name": "Conjunctivitis ",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30600"
+  },
+  {
+    "id": "30889",
+    "name": "Rove beetles",
+    "type": "trans",
+    "parent": "30888",
+    "general_id": 8,
+    "upper_node": "30600"
+  },
+  {
+    "id": "30463",
+    "name": "Dermatitis",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30888"
+  },
+  {
+    "id": "30464",
+    "name": "Paederus dermatitis",
+    "type": "trans",
+    "parent": "30463",
+    "general_id": 8,
+    "upper_node": "30888"
+  },
+  {
+    "id": "30648",
+    "name": "Diptera",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30463"
+  },
+  {
+    "id": "30577",
+    "name": "Head lice",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30648"
+  },
+  {
+    "id": "30578",
+    "name": "Pediculosis capitis",
+    "type": "trans",
+    "parent": "30577",
+    "general_id": 8,
+    "upper_node": "30648"
+  },
+  {
+    "id": "30602",
+    "name": "Hymenopterans",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30577"
+  },
+  {
+    "id": "30870",
+    "name": "Fire ants",
+    "type": "trans",
+    "parent": "30602",
+    "general_id": 8,
+    "upper_node": "30577"
+  },
+  {
+    "id": "30883",
+    "name": "Insect bites",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30602"
+  },
+  {
+    "id": "30887",
+    "name": "Insect stings",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30883"
+  },
+  {
+    "id": "30694",
+    "name": "Myiasis",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30887"
+  },
+  {
+    "id": "30767",
+    "name": "Nonscabetic mites",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30694"
+  },
+  {
+    "id": "30456",
+    "name": "Scabies",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30767"
+  },
+  {
+    "id": "30457",
+    "name": "Sarcoptes scabiei",
+    "type": "trans",
+    "parent": "30456",
+    "general_id": 8,
+    "upper_node": "30767"
+  },
+  {
+    "id": "30647",
+    "name": "Stinging and biting ",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30456"
+  },
+  {
+    "id": "30743",
+    "name": " Thaumetopoea pityocampa",
+    "type": "trans",
+    "parent": "30647",
+    "general_id": 8,
+    "upper_node": "30456"
+  },
+  {
+    "id": "30641",
+    "name": "Tungiasis",
+    "type": "trans",
+    "parent": "30455",
+    "general_id": 8,
+    "upper_node": "30647"
+  },
+  {
+    "id": "30642",
+    "name": "Tunga penetrans",
+    "type": "trans",
+    "parent": "30641",
+    "general_id": 8,
+    "upper_node": "30647"
+  },
+  {
+    "id": "30959",
+    "name": "Seabather eruption",
+    "type": "trans",
+    "parent": "30709",
+    "general_id": 9,
+    "upper_node": "30641"
+  },
+  {
+    "id": "30710",
+    "name": "Envenomization",
+    "type": "trans",
+    "parent": "30709",
+    "general_id": 9,
+    "upper_node": "30959"
+  },
+  {
+    "id": "30866",
+    "name": "Bites",
+    "type": "trans",
+    "parent": "30865",
+    "general_id": 11,
+    "upper_node": "30710"
+  },
+  {
+    "id": "30868",
+    "name": "Cats",
+    "type": "trans",
+    "parent": "30866",
+    "general_id": 11,
+    "upper_node": "30710"
+  },
+  {
+    "id": "30867",
+    "name": "Dogs",
+    "type": "trans",
+    "parent": "30866",
+    "general_id": 11,
+    "upper_node": "30868"
+  },
+  {
+    "id": "30871",
+    "name": "Rats",
+    "type": "trans",
+    "parent": "30866",
+    "general_id": 11,
+    "upper_node": "30867"
+  },
+  {
+    "id": "30869",
+    "name": "Snakes",
+    "type": "trans",
+    "parent": "30866",
+    "general_id": 11,
+    "upper_node": "30871"
+  },
+  {
+    "id": "30741",
+    "name": "Amnesic shellfish poisoning",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30866"
+  },
+  {
+    "id": "30742",
+    "name": "Pseudonitzschia spp.",
+    "type": "trans",
+    "parent": "30741",
+    "general_id": 12,
+    "upper_node": "30866"
+  },
+  {
+    "id": "30459",
+    "name": "Ciguatera",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30741"
+  },
+  {
+    "id": "30460",
+    "name": "Gambierdiscus toxicus",
+    "type": "trans",
+    "parent": "30459",
+    "general_id": 12,
+    "upper_node": "30741"
+  },
+  {
+    "id": "30902",
+    "name": "Cyanobacteria",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30459"
+  },
+  {
+    "id": "30886",
+    "name": "Diarhettic shellfish poisoning",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30902"
+  },
+  {
+    "id": "30900",
+    "name": "Gastrointestinal illness",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30886"
+  },
+  {
+    "id": "30901",
+    "name": "Cyanobacteria ",
+    "type": "trans",
+    "parent": "30900",
+    "general_id": 12,
+    "upper_node": "30886"
+  },
+  {
+    "id": "30465",
+    "name": "neurotoxic shellfish poisoning",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30900"
+  },
+  {
+    "id": "30466",
+    "name": "Karenia mikimotoi",
+    "type": "trans",
+    "parent": "30465",
+    "general_id": 12,
+    "upper_node": "30900"
+  },
+  {
+    "id": "30097",
+    "name": "Paralytic shellfish poisoning",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30465"
+  },
+  {
+    "id": "30098",
+    "name": "Dinofagellates",
+    "type": "trans",
+    "parent": "30097",
+    "general_id": 12,
+    "upper_node": "30465"
+  },
+  {
+    "id": "30903",
+    "name": "Respiratory problems",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30097"
+  },
+  {
+    "id": "30892",
+    "name": "Shellfish poisonings",
+    "type": "trans",
+    "parent": "30458",
+    "general_id": 12,
+    "upper_node": "30903"
+  },
+  {
+    "id": "30893",
+    "name": "Pseudonitzschia spp.",
+    "type": "trans",
+    "parent": "30892",
+    "general_id": 12,
+    "upper_node": "30903"
+  },
+  {
+    "id": "30843",
+    "name": "Amoebiasis",
+    "type": "trans",
+    "parent": "30699",
+    "general_id": 13,
+    "upper_node": "30892"
+  },
+  {
+    "id": "30844",
+    "name": "Entaemoeba histolytica",
+    "type": "trans",
+    "parent": "30843",
+    "general_id": 13,
+    "upper_node": "30892"
+  },
+  {
+    "id": "30938",
+    "name": "Entamoeba dispar",
+    "type": "trans",
+    "parent": "30843",
+    "general_id": 13,
+    "upper_node": "30844"
+  },
+  {
+    "id": "30895",
+    "name": "Entamoeba coli",
+    "type": "trans",
+    "parent": "30843",
+    "general_id": 13,
+    "upper_node": "30938"
+  },
+  {
+    "id": "30898",
+    "name": "Entamoeba hartmanni",
+    "type": "trans",
+    "parent": "30843",
+    "general_id": 13,
+    "upper_node": "30895"
+  },
+  {
+    "id": "30899",
+    "name": "Lodamoeba bütschlii",
+    "type": "trans",
+    "parent": "30843",
+    "general_id": 13,
+    "upper_node": "30898"
+  },
+  {
+    "id": "30896",
+    "name": "Endolimax",
+    "type": "trans",
+    "parent": "30699",
+    "general_id": 13,
+    "upper_node": "30843"
+  },
+  {
+    "id": "30897",
+    "name": "Endolimax nana",
+    "type": "trans",
+    "parent": "30896",
+    "general_id": 13,
+    "upper_node": "30843"
+  },
+  {
+    "id": "30700",
+    "name": "Granulomatous amoebic encephalitis",
+    "type": "trans",
+    "parent": "30699",
+    "general_id": 13,
+    "upper_node": "30896"
+  },
+  {
+    "id": "30701",
+    "name": "Balamuthia mandrillaris",
+    "type": "trans",
+    "parent": "30700",
+    "general_id": 13,
+    "upper_node": "30896"
+  },
+  {
+    "id": "30653",
+    "name": "Ocular rhinosporidiosis",
+    "type": "trans",
+    "parent": "30652",
+    "general_id": 14,
+    "upper_node": "30700"
+  },
+  {
+    "id": "30654",
+    "name": "Rhinosporidium seeberi",
+    "type": "trans",
+    "parent": "30653",
+    "general_id": 14,
+    "upper_node": "30700"
+  },
+  {
+    "id": "30891",
+    "name": "Naegleria fowleri",
+    "type": "trans",
+    "parent": "30796",
+    "general_id": 15,
+    "upper_node": "30653"
+  },
+  {
+    "id": "30797",
+    "name": "Naegleriasis (Primary amoebic meningoencephalitis)",
+    "type": "trans",
+    "parent": "30796",
+    "general_id": 15,
+    "upper_node": "30891"
+  },
+  {
+    "id": "30798",
+    "name": "Naegleria fowleri",
+    "type": "trans",
+    "parent": "30797",
+    "general_id": 15,
+    "upper_node": "30891"
+  },
+  {
+    "id": "30948",
+    "name": "Allergic rhinitis/Hay fever",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30797"
+  },
+  {
+    "id": "30955",
+    "name": "Pollen",
+    "type": "trans",
+    "parent": "30948",
+    "general_id": 16,
+    "upper_node": "30797"
+  },
+  {
+    "id": "30949",
+    "name": "Allergic sensitization",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30948"
+  },
+  {
+    "id": "30952",
+    "name": "Rhinoconjunctivitis",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30949"
+  },
+  {
+    "id": "30953",
+    "name": "Food allergens",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30952"
+  },
+  {
+    "id": "30954",
+    "name": "Aeroallergens",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30953"
+  },
+  {
+    "id": "30956",
+    "name": "Atopic dermatitis",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30954"
+  },
+  {
+    "id": "30961",
+    "name": "Contact dermatitis",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30956"
+  },
+  {
+    "id": "30746",
+    "name": "Allergic diseases",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30961"
+  },
+  {
+    "id": "30943",
+    "name": "Pollen",
+    "type": "trans",
+    "parent": "30746",
+    "general_id": 16,
+    "upper_node": "30961"
+  },
+  {
+    "id": "30747",
+    "name": "Ambrosia artemisiifolia pollen",
+    "type": "trans",
+    "parent": "30746",
+    "general_id": 16,
+    "upper_node": "30943"
+  },
+  {
+    "id": "30268",
+    "name": "Asthma ",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30746"
+  },
+  {
+    "id": "30269",
+    "name": "Pollen",
+    "type": "trans",
+    "parent": "30268",
+    "general_id": 16,
+    "upper_node": "30746"
+  },
+  {
+    "id": "30872",
+    "name": "Parthenium dermatitis",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30268"
+  },
+  {
+    "id": "30873",
+    "name": "Parthenin",
+    "type": "trans",
+    "parent": "30872",
+    "general_id": 16,
+    "upper_node": "30268"
+  },
+  {
+    "id": "30744",
+    "name": "Phytophotodermatitis",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30872"
+  },
+  {
+    "id": "30745",
+    "name": "Phototoxic sap",
+    "type": "trans",
+    "parent": "30744",
+    "general_id": 16,
+    "upper_node": "30872"
+  },
+  {
+    "id": "30517",
+    "name": "Respiratory disease",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30744"
+  },
+  {
+    "id": "30518",
+    "name": "Pollen",
+    "type": "trans",
+    "parent": "30517",
+    "general_id": 16,
+    "upper_node": "30744"
+  },
+  {
+    "id": "30983",
+    "name": "Biogenic isoprenes",
+    "type": "trans",
+    "parent": "30517",
+    "general_id": 16,
+    "upper_node": "30518"
+  },
+  {
+    "id": "30853",
+    "name": "Thunderstorm asthma",
+    "type": "trans",
+    "parent": "30267",
+    "general_id": 16,
+    "upper_node": "30517"
+  },
+  {
+    "id": "30854",
+    "name": "Pollen",
+    "type": "trans",
+    "parent": "30853",
+    "general_id": 16,
+    "upper_node": "30517"
+  }
+]
