@@ -7,3 +7,6 @@ We found that nearly 60% of all known pathegenic diseases that have affected hum
 By 2020, the CO2 concentration in the air has increased to 412.5 ppm from about 280ppm before the start of the industrial revolution, and each year is higher than the year before. So you make the math, and good luck to all of us.
 
 [Interactive data](https://camilo-mora.github.io/Diseases/)
+
+Table S1 contains the list of all diseases that were considered in this paper.
+Table S2 contains the list of refereces from which emperical cases were obtained.
