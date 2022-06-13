@@ -9,4 +9,5 @@ By 2020, the CO2 concentration in the air has increased to 412.5 ppm from about 
 [Interactive data](https://camilo-mora.github.io/Diseases/)
 
 Table S1 contains the list of all diseases that were considered in this paper.
+
 Table S2 contains the list of refereces from which emperical cases were obtained.
