@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  
+
   <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
   <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
   <!--<link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">-->
@@ -19,7 +19,12 @@
 	.header {display: flex;justify-content:space-between;align-items:center;width:100%;padding: 15px;}
 	.logo {text-decoration: none;}
 	.logo img {width: 200px;}
-	.header h1 {width: calc(100% - 210px);margin:0;padding:0;text-align: center;font-size:32px;}
+	.logo.univ {padding: 10px;}
+	.logo.univ img { width: auto; height: 100px; }
+	.header .title {width: calc(100% - 330px);margin:0;padding:0;text-align: center;}
+	.header .title h1 {font-size:32px;}
+	.header .title p {margin: 15px 30px 0 30px;}
+	.header .title p span {display: block; max-width: 1400px;margin: 0 auto 10px auto;}
 
 	.nav li a:hover {background: transparent;text-decoration: underline;}
   </style>
@@ -37,7 +42,22 @@
 		<a class="logo" href="https://camilo-mora.github.io/GEO309/" target="_blank">
 			<img src="https://camilo-mora.github.io/GEO309/images/MoraLab.png" />
 		</a>
-		<h1> Traceable evidence of the impacts of climate change on pathogenic human diseases </h1>
+		<div class="title">
+			<h1> Traceable evidence of the impacts of climate change on pathogenic human diseases </h1>
+			<p>
+				<br>
+				<span>
+				Please use the following reference to cite the use of information from this web tool:
+				Mora C, McKenzie T, Gaw IM, Dean JM, von Hammerstein H, Knudson TA, Setter RO, Smith CZ, Webster KM, Patz JA, Franklin EC (2022)
+				Over half of known human pathogenic diseases can be aggravated by climate change.
+				<i>Nature Climate Change</i> <a href="https://doi.org/10.1038/s41558-022-01426-1">https://doi.org/10.1038/s41558-022-01426-1</a>
+				</span>
+				<small>Developed by Daisuke Horita</small>
+			</p>
+		</div>
+		<a class="logo univ" href="https://manoa.hawaii.edu/" target="_blank">
+			<img src="assets/images/logo_univ.png"/>
+		</a>
 	</div>
 	<nav class="navbar cus-margin">
 		<div id="navbar" class="navbar-collapse collapse">
@@ -1324,7 +1344,7 @@
 				//let linkGen=(elm.isLogin==="1"?"http://diseaseproject.impactsofclimatechange.org/index.php/paper/add/"+elm.reference_id+"/"+elm.id:"javascript:errordialog('Please Login First!');");
 				subhtml+='<p class="text-right"><b>Enter By :</b><br>'+entry.user+'<br>'; // <a href="'+linkGen+'">Edit</a>
 				if (entry.PDF != "" && entry.PDF != null) {
-					subhtml+='<a target="_blank" href="PDFs/'+entry.PDF+'">Download</a>';
+					subhtml+='<a target="_blank" href="uploads/PDF/'+entry.PDF+'">Download</a>';
 				}
 				subhtml+='</p>';
 			}
@@ -1486,39 +1506,39 @@
 
 
 
-<!-- Custom Dialogs -->	  
-		<!-- Confirm -->	
-	    <div id='confirmDb' class="dialogDiv"> 
+<!-- Custom Dialogs -->
+		<!-- Confirm -->
+	    <div id='confirmDb' class="dialogDiv">
 			<div class='title' id="confirmMsg">
-			</div> 
+			</div>
 			<hr>
 			<input type='button' class="btn text-bold btn-danger text-white" value='no' id='cancelConfirmBtn' />
 			<input type='button' class="btn text-bold btn-success text-white pull-right" value='yes' id='confirmBtn' />
 		</div>
-		
-		
+
+
 		<!-- Warning -->
-	    <div id='warnDb' class="dialogDiv"> 
+	    <div id='warnDb' class="dialogDiv">
 			<div class='title' id="warnMsg">
 			</div>
-			<hr>			
+			<hr>
 			<input type='button' class="btn btn-warning text-bold btn-info text-white pull-right" value='OK' id='warnBtn' />
 		</div>
-		
-		
+
+
 		<!-- Error -->
-	    <div id='errorDb' class="dialogDiv"> 
+	    <div id='errorDb' class="dialogDiv">
 			<div class='title' id="errorMsg">
 			</div>
-			<hr>		
+			<hr>
 			<input type='button' class="btn text-bold btn-danger text-white pull-right" value='OK' id='errorBtn' />
 		</div>
-		
+
 		<!-- Success -->
-	    <div id='successDb' class="dialogDiv"> 
+	    <div id='successDb' class="dialogDiv">
 			<div class='title' id="succMsg">
 			</div>
-			<hr>			
+			<hr>
 			<input type='button' class="btn btn-success text-bold text-white pull-right" value='OK' id='succBtn' />
 		</div>
 
